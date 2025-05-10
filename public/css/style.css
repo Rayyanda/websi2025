@@ -1,7 +1,6 @@
 body {
     background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: #f0f9ff;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -148,3 +147,10 @@ body {
       padding-bottom: 40px;
     }
   }
+  .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+*{
+    font-family: "Nunito", sans-serif;
+}

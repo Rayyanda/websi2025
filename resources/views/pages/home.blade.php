@@ -26,9 +26,7 @@
                     <div class="carousel-item active">
                         <div class="feature-card mx-auto p-4 shadow rounded w-50">
                             <h3>Hands-On Learning</h3>
-                            <p>Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses,
-                                perancangan dan
-                                pengembangan sistem informasi dan teknologi informasi</p>
+                            <p>Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses, perancangan dan pengembangan sistem informasi dan teknologi informasi</p>
                         </div>
                     </div>
                     <div class="carousel-item">
@@ -43,8 +41,7 @@
                             <p>Menyelenggarakan pendidikan yang berkualitas untuk menghasilkan lulusan Program Studi
                                 Informasi yang
                                 mampu bekerja sama dalam tim, komunikator yang lebih efektif serta memiliki keinginan
-                                pembelajaran
-                                sepanjang hidup yang berlandaskan etika dan moral.</p>
+                            pembelajaran sepanjang hidup yang berlandaskan etika dan moral.</p>
                         </div>
                     </div>
                     <div class="carousel-item">
