@@ -9,7 +9,7 @@ class Gallery extends Model
     //
     protected $table = 'galleries';
     protected $fillable = [
-        'slug',
+        'slug_id',
         'image',
         'published_at'
     ];

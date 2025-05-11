@@ -47,7 +47,7 @@
                 <li><a class="dropdown-item" href="{{ route('pages.tentang.index','visi-dan-misi') }}" wire:navigate >Visi & Misi</a></li>
                 <li><a class="dropdown-item" href="{{ route('pages.tentang.index','keunggulan') }}" wire:navigate >Keunggulan</a></li>
                 <li><a class="dropdown-item" href="{{ route('pages.tentang.index','akreditasi') }}" wire:navigate >Akreditasi</a></li>
-                <li><a class="dropdown-item" href="#">Kegiatan Mahasiswa</a></li>
+                <li><a class="dropdown-item" href="{{ route('pages.tentang.index','kegiatan-mahasiswa') }}" wire:navigate>Kegiatan Mahasiswa</a></li>
                 <li><a class="dropdown-item" href="#">Beasiswa</a></li>
                 <li><a class="dropdown-item" href="#">Belajar di Jepang</a></li>
                 <li><a class="dropdown-item" href="#">Prospek Karir</a></li>
@@ -70,9 +70,9 @@
                 Dosen & Staff
             </a>
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown3" >
-                <li><a class="dropdown-item" href="#">Daftar Dosen</a></li>
-                <li><a class="dropdown-item" href="#">Daftar Tenaga Kependidikan</a></li>
-                <li><a class="dropdown-item" href="#">Daftar Laboran</a></li>
+                <li><a class="dropdown-item" href="{{ route('dosen.dosen.index','daftar-dosen') }}" wire:navigate >Daftar Dosen</a></li>
+                <li><a class="dropdown-item" href="{{ route('dosen.dosen.index','daftar-tenaga-pendidikan') }}" wire:navigate >Daftar Tenaga Kependidikan</a></li>
+                <li><a class="dropdown-item" href="{{ route('dosen.dosen.index','daftar-laboran') }}" wire:navigate >Daftar Laboran</a></li>
             </ul>
         </li>
         <li class="nav-item dropdown">

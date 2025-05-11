@@ -19,6 +19,7 @@ class GalleryResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-rectangle-stack';
     protected static ?string $navigationLabel = 'Galleries';
+    protected static ?string $navigationBadgeTooltip = 'Jumlah Gambar yang terdata';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
@@ -49,7 +50,7 @@ class GalleryResource extends Resource
     {
         return $table
             ->columns([
-                Tables\Columns\TextColumn::make('slug')
+                Tables\Columns\TextColumn::make('slug.slug_name')
                     ->searchable(),
                 Tables\Columns\ImageColumn::make('image'),
                 Tables\Columns\TextColumn::make('published_at')

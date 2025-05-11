@@ -19,6 +19,7 @@ class SlugResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-tag';
     protected static ?string $navigationLabel = 'Slugs';
+    protected static ?string $navigationBadgeTooltip = 'Jumlah Pengalamatan dengan Slug';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();

@@ -15,7 +15,6 @@ use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\DateTimePicker;
-use Filament\Forms\Components\FileUpload;
 use Filament\Forms\Components\RichEditor;
 use Filament\Forms\Components\Select;
 use Filament\Tables\Columns\TextColumn;
@@ -26,6 +25,7 @@ class PageResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-view-columns';
     protected static ?string $navigationLabel = 'Pages';
+    protected static ?string $navigationBadgeTooltip = 'Jumlah halaman';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
@@ -57,10 +57,19 @@ class PageResource extends Resource
             ->columns([
                 //
                 TextColumn::make('title')
+                    ->searchable()
                     ->description(fn(Page $page): string => $page->slug->slug_name),
                 TextColumn::make('published_at')
+                    ->sortable()
                     ->since(),
-
+                Tables\Columns\TextColumn::make('created_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
+                Tables\Columns\TextColumn::make('updated_at')
+                    ->dateTime()
+                    ->sortable()
+                    ->toggleable(isToggledHiddenByDefault: true),
             ])
             ->filters([
                 //
