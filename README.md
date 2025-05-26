@@ -9,47 +9,47 @@
 
 ##
 
-# Nama Project
+# WEBSI
 
 Ini adalah project Laravel yang sudah saya upload ke GitHub. Berikut langkah-langkah untuk cloning dan menjalankannya di komputer Anda. Pastikan sudah menginstal :
-# 1. Composer
-# 2. PHP versi > 8.1
-# 3. NodeJs
-# 4. Git
+1. Composer
+2. PHP versi >= 8.2
+3. NodeJs
+4. Git
 
 ## Langkah-langkah
 
 # 1. Clone Repository
-git clone https://github.com/Rayyanda/websi2025.git
-cd nama-project
+    git clone https://github.com/Rayyanda/websi2025.git
+    cd nama-project
 
 # 2. Install Dependencies
-composer install
+    composer install
 
 # 3. Copy file .env
-cp .env.example .env
+    cp .env.example .env
 
 # 4. Generate Application Key
-php artisan key:generate
+    php artisan key:generate
 
 # 5. Atur Konfigurasi Database
-#    Buka file .env dan ubah konfigurasi berikut sesuai dengan database Anda:
-#    DB_CONNECTION=mysql
-#    DB_HOST=127.0.0.1
-#    DB_PORT=3306
-#    DB_DATABASE=nama_database
-#    DB_USERNAME=username_database
-#    DB_PASSWORD=password_database
+    Buka file .env dan ubah konfigurasi berikut sesuai dengan database Anda:
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=nama_database
+    DB_USERNAME=username_database
+    DB_PASSWORD=password_database
 
 # 6. Jalankan Migrasi dan Seeder
-php artisan migrate
-php artisan db:seed
+    php artisan migrate
+    php artisan db:seed
 
 # 7. Jalankan Server Lokal
-php artisan serve
+    php artisan serve
 
 # karena menggunakan fitur npm atau vite, jalankan juga:
-npm install
-npm run dev
+    npm install
+    npm run dev
 
-# Project Laravel Anda sekarang sudah berjalan di http://127.0.0.1:8000
+Project Laravel Anda sekarang sudah berjalan di http://127.0.0.1:8000
