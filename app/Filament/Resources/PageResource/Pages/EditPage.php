@@ -14,6 +14,8 @@ class EditPage extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\Action::make('New Page')
+                ->url('/admin/pages/create'),
         ];
     }
 }

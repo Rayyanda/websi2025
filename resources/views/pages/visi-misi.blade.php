@@ -9,6 +9,9 @@
                     @case('text')
                         @include('blocks.' . $block['type'],['data'=>$block['data']])
                         @break
+                    @case('image')
+                        <x-images :dataImage="$block['data']" />
+                        @break
 
                     @case('columns')
                         @include('blocks.' . $block['type'], ['data' => $block['data']])

@@ -14,6 +14,8 @@ class EditContent extends EditRecord
     {
         return [
             Actions\DeleteAction::make(),
+            Actions\Action::make('New Contents')
+                ->url('/admin/contents/create'),
         ];
     }
 }

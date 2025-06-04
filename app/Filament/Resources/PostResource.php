@@ -2,9 +2,9 @@
 
 namespace App\Filament\Resources;
 
-use App\Filament\Resources\PageResource\Pages;
-use App\Filament\Resources\PageResource\RelationManagers;
-use App\Models\Page;
+use App\Filament\Resources\PostResource\Pages;
+use App\Filament\Resources\PostResource\RelationManagers;
+use App\Models\Post;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -12,29 +12,42 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
-use Illuminate\Support\Str;
-use App\Filament\Resources\ContentResource\Pages as ContentResou;
 
-
-class PageResource extends Resource
+class PostResource extends Resource
 {
-    protected static ?string $model = Page::class;
+    protected static ?string $model = Post::class;
 
-    protected static ?string $navigationIcon = 'heroicon-s-link';
+    protected static ?string $navigationIcon = 'heroicon-o-clipboard-document';
     protected static ?string $navigationGroup = 'Halaman';
     public static function getNavigationBadge(): ?string
     {
         return static::getModel()::count();
     }
+
     public static function form(Form $form): Form
     {
         return $form
             ->schema([
+                Forms\Components\Select::make('category_id')
+                    ->relationship('category', 'title')
+                    ->createOptionForm([
+                        Forms\Components\TextInput::make('title')
+                            ->required(),
+                        Forms\Components\TextInput::make('url'),
+                    ]),
                 Forms\Components\TextInput::make('title')
                     ->required()
-                    ->maxLength(255)
-                    ->required(),
+                    ->maxLength(255),
+                Forms\Components\FileUpload::make('images')
+                    ->multiple()
+                    ->columnSpanFull(),
+                Forms\Components\RichEditor::make('content')
+                    ->required()
+                    ->columnSpanFull(),
                 Forms\Components\DateTimePicker::make('published_at')
+                    ->required(),
+                Forms\Components\Select::make('user_id')
+                    ->relationship(name: 'user', titleAttribute: 'name')
                     ->required(),
             ]);
     }
@@ -43,16 +56,18 @@ class PageResource extends Resource
     {
         return $table
             ->columns([
+                Tables\Columns\TextColumn::make('category_id')
+                    ->numeric()
+                    ->sortable(),
                 Tables\Columns\TextColumn::make('title')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('slug')
                     ->searchable(),
-                Tables\Columns\IconColumn::make('contents')
-                    ->label('Konten')
-                    ->icon(fn($record) => $record->contents->isNotEmpty() ? 'heroicon-o-check' : 'heroicon-o-minus')
-                    ->color(fn($record) => $record->contents->isNotEmpty() ? 'success' : 'danger'),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('user_id')
+                    ->numeric()
                     ->sortable(),
                 Tables\Columns\TextColumn::make('created_at')
                     ->dateTime()
@@ -63,13 +78,11 @@ class PageResource extends Resource
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
             ])
-            ->query(static::getEloquentQuery()->with('contents'))
             ->filters([
                 //
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -77,25 +90,20 @@ class PageResource extends Resource
                 ]),
             ]);
     }
-    public static function getEloquentQuery(): Builder
-    {
-        return parent::getEloquentQuery()
-            ->with('contents');
-    }
-
 
     public static function getRelations(): array
     {
         return [
+            //
         ];
     }
 
     public static function getPages(): array
     {
         return [
-            'index' => Pages\ListPages::route('/'),
-            'create' => Pages\CreatePage::route('/create'),
-            'edit' => Pages\EditPage::route('/{record}/edit'),
+            'index' => Pages\ListPosts::route('/'),
+            'create' => Pages\CreatePost::route('/create'),
+            'edit' => Pages\EditPost::route('/{record}/edit'),
         ];
     }
 }

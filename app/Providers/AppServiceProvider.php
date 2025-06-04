@@ -2,9 +2,11 @@
 
 namespace App\Providers;
 
+use App\Models\KalenderAkademik;
 use Filament\Support\Colors\Color;
 use Filament\Support\Facades\FilamentColor;
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\View;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -22,6 +24,9 @@ class AppServiceProvider extends ServiceProvider
     public function boot(): void
     {
         //
+        View::composer('layouts.app',function($view){
+            $view->with('kalender',KalenderAkademik::select('slug')->groupBy('slug')->get());
+        });
         FilamentColor::register([
             'danger' => Color::Red,
             'gray' => Color::Zinc,

@@ -21,18 +21,28 @@
             </svg>
           </button>
 
-          <div class="carousel-slide active" aria-hidden="false">
-            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&q=80" alt="Sistem Informasi 1" />
+          <div class="carousel-slide" aria-hidden="true">
+            <img src="{{ asset('images/kunjungan-industri-1.jpg') }}" alt="Sistem Informasi 4" />
           </div>
           <div class="carousel-slide" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=600&q=80" alt="Sistem Informasi 2" />
+            <img src="{{ asset('images/beasiswa.jpg') }}" alt="Sistem Informasi 4" />
           </div>
           <div class="carousel-slide" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?auto=format&fit=crop&w=600&q=80" alt="Sistem Informasi 3" />
+            <img src="{{ asset('images/create-website.jpg') }}" alt="Sistem Informasi 4" />
           </div>
           <div class="carousel-slide" aria-hidden="true">
-            <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80" alt="Sistem Informasi 4" />
+            <img src="{{ asset('images/magang-2.jpg') }}" alt="Sistem Informasi 4" />
           </div>
+          <div class="carousel-slide" aria-hidden="true">
+            <img src="{{ asset('images/Perserta-magang-1.jpg') }}" alt="Sistem Informasi 4" />
+          </div>
+          <div class="carousel-slide" aria-hidden="true">
+            <img src="{{ asset('images/pertukaran-pelajar-1.jpg') }}" alt="Sistem Informasi 4" />
+          </div>
+          <div class="carousel-slide" aria-hidden="true">
+            <img src="{{ asset('images/semworksi.jpg') }}" alt="Sistem Informasi 4" />
+          </div>
+
         </div>
       </div>
     </div>
@@ -40,11 +50,9 @@
 
   <!-- About Section -->
   <section id="about" class="container mx-auto px-6 py-16">
-    <h3 class="text-center text-3xl font-bold mb-8 text-indigo-700">Tentang Program Studi Sistem Informasi</h3>
+    <h3 class="text-center text-3xl font-bold mb-8 text-indigo-700">Visi Program Studi Sistem Informasi</h3>
     <p class="max-w-4xl mx-auto text-center text-gray-700 text-lg leading-relaxed">
-      Program Studi Sistem Informasi bertujuan menghasilkan lulusan yang mampu merancang, mengelola,
-      dan mengembangkan sistem informasi untuk mendukung kebutuhan organisasi dan bisnis di era digital
-      dengan pendekatan teknologi dan manajemen yang efektif.
+      Menjadi Program Studi Sistem Informasi unggul di Indonesia di bidang sistem informasi manufaktur dan analisis sistem pada tahun 2027
     </p>
   </section>
 
@@ -75,28 +83,34 @@
   {{-- VMTS --}}
   <section id="program" class="bg-gray-100 py-16">
     <div class="container mx-auto px-6">
-      <h3 class="text-center text-3xl font-bold text-indigo-700 mb-12">Visi, Misi, Tujuan & Strategis</h3>
+      <h3 class="text-center text-3xl font-bold text-indigo-700 mb-12">Misi Program Studi Sistem Informasi</h3>
       <div class="grid gap-10 md:grid-cols-4 max-w-6xl mx-auto">
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
-          <h4 class="text-xl font-semibold mb-3">Visi</h4>
+
           <p class="text-gray-600 mb-4">
-            Menjadi Program Studi Sistem Informasi unggul di Indonesia di bidang sistem informasi manufaktur dan analisis sistem pada tahun 2027
+            Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses perancangan dan pengembangan Sistem Informasi dan Teknologi Informasi
           </p>
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
           <h4 class="text-xl font-semibold mb-3">Pengembangan Aplikasi</h4>
-          <p class="text-gray-600 mb-4">Kuasai teknik dan metodologi dalam merancang dan membangun aplikasi bisnis yang modern dan responsif.</p>
-          <a href="#contact" class="text-indigo-600 font-semibold hover:underline">Daftar Sekarang &rarr;</a>
+          <p class="text-gray-600 mb-4">
+            Menyelenggarakan pendidikan yang berkualitas untuk menghasilkan lulusan Program Studi Sistem Informasi yang mampu bekerjasama dalam tim, komunikator yang efektif serta memiliki keinginan pembelajaran sepanjang hidup yang berlandaskan etika dan moral.
+          </p>
+
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
           <h4 class="text-xl font-semibold mb-3">Analisis Data dan Sistem</h4>
-          <p class="text-gray-600 mb-4">Tingkatkan kemampuan menganalisis data dan sistem informasi untuk pengambilan keputusan yang tepat.</p>
-          <a href="#contact" class="text-indigo-600 font-semibold hover:underline">Daftar Sekarang &rarr;</a>
+          <p class="text-gray-600 mb-4">
+            Berperan aktif dalam kegiatan penelitian dan pengabdian masyarakat di bidang keilmuan sistem informasi yang memberikan kontribusi kepada masyarakat.
+          </p>
+
         </div>
         <div class="bg-white p-6 rounded-lg shadow hover:shadow-lg transition transform hover:-translate-y-1">
           <h4 class="text-xl font-semibold mb-3">Analisis Data dan Sistem</h4>
-          <p class="text-gray-600 mb-4">Tingkatkan kemampuan menganalisis data dan sistem informasi untuk pengambilan keputusan yang tepat.</p>
-          <a href="#contact" class="text-indigo-600 font-semibold hover:underline">Daftar Sekarang &rarr;</a>
+          <p class="text-gray-600 mb-4">
+            Berperan aktif dalam kemitraan dalam mendukung kegiatan tridarma dan memberikan layanan akademik dan non akademik baik pada tingkat nasional maupun internasional.
+          </p>
+
         </div>
       </div>
     </div>
@@ -135,7 +149,7 @@
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="bg-indigo-600 text-white py-16">
+  {{-- <section id="contact" class="bg-indigo-600 text-white py-16">
     <div class="container mx-auto px-6 max-w-4xl">
       <h3 class="text-3xl font-bold mb-8 text-center">Hubungi Kami</h3>
       <form class="max-w-2xl mx-auto space-y-6 bg-indigo-700 rounded-lg p-8 shadow-lg" onsubmit="event.preventDefault(); alert('Terima kasih atas pesan Anda!'); this.reset();">
@@ -158,6 +172,6 @@
           class="w-full bg-white text-indigo-600 font-semibold py-3 rounded hover:bg-indigo-50 transition">Kirim Pesan</button>
       </form>
     </div>
-  </section>
-
+  </section> --}}
+<script src="{{ asset('js/carousel.js') }}"></script>
 @endsection
