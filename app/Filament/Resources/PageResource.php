@@ -14,7 +14,8 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 use App\Filament\Resources\ContentResource\Pages as ContentResou;
-
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class PageResource extends Resource
 {
@@ -97,5 +98,64 @@ class PageResource extends Resource
             'create' => Pages\CreatePage::route('/create'),
             'edit' => Pages\EditPage::route('/{record}/edit'),
         ];
+    }
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('create Page');
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::user()?->can('view-any Page'); // null-safe
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::user()?->can('delete Page');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return Auth::user()?->can('delete-any Page');
+    }
+
+    public static function canForceDelete(Model $record): bool
+    {
+        return Auth::user()?->can('force-delete Page');
+    }
+
+    public static function canForceDeleteAny(): bool
+    {
+        return Auth::user()?->can('force-delete-any Page');
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::user()?->can('update Page');
+    }
+
+    public static function canEditAny(): bool
+    {
+        return Auth::user()?->can('update-any Page');
+    }
+
+    public static function canRestore(Model $record): bool
+    {
+        return Auth::user()?->can('restore Page');
+    }
+
+    public static function canRestoreAny(): bool
+    {
+        return Auth::user()?->can('restore-any Page');
+    }
+
+    public static function canForceRestore(Model $record): bool
+    {
+        return Auth::user()?->can('force-restore Page');
+    }
+
+    public static function canForceRestoreAny(): bool
+    {
+        return Auth::user()?->can('force-restore-any Page');
     }
 }

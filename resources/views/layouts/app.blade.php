@@ -9,7 +9,6 @@
     <!-- Tailwind CSS CDN -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
-    {{-- <script src="https://cdn.tailwindcss.com"></script> --}}
     @livewireStyles
     @yield('page-style')
 </head>
@@ -46,7 +45,7 @@
                             class="block px-4 py-2 hover:bg-indigo-100 transition" role="menuitem">Sejarah Prodi</a>
                         <a href="{{ route('pages', 'visi-misi-tujuan-strategi') }}" wire:navigate
                             class="block px-4 py-2 hover:bg-indigo-100 transition" role="menuitem">Visi, Misi, Tujuan,
-                            dan Subjektif</a>
+                            dan Strategi</a>
                         <a href="{{ route('pages', 'keunggulan') }}" wire:navigate
                             class="block px-4 py-2 hover:bg-indigo-100 transition" role="menuitem">Keunggulan</a>
                         <a href="{{ route('pages', 'akreditasi') }}" wire:navigate
@@ -201,10 +200,10 @@
                     </button>
                     <div class="absolute left-0 mt-2 w-48 bg-white text-indigo-900 rounded-md shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-opacity duration-200 z-20"
                         role="menu" aria-labelledby="akademikDropdownBtn">
-                        <a href="{{ route('pages', 'daftar-dosen') }}" wire:navigate
+                        <a href="{{ route('pages', 'distribusi-mata-kuliah-kkni-2017') }}" wire:navigate
                             class="block px-4 py-2 hover:bg-indigo-100 transition" role="menuitem">Distribusi Mata
                             Kuliah Kurikulum KKNI 2017</a>
-                        <a href="{{ route('pages','distribusi-mata-kuliah-kkni-2017') }}" wire:navigate class="block px-4 py-2 hover:bg-indigo-100 transition"
+                        <a href="{{ route('pages','distribusi-mata-kuliah-kurikulum-obe-mbkm-2022') }}" wire:navigate class="block px-4 py-2 hover:bg-indigo-100 transition"
                             role="menuitem">Distribusi Mata Kuliah Kurikulum OBE MBKM 2022</a>
                         <a href="{{ route('pages','pengumuman') }}" wire:navigate class="block px-4 py-2 hover:bg-indigo-100 transition"
                             role="menuitem">Pengumuman</a>
@@ -303,7 +302,7 @@
                         class="block px-10 py-2 text-white hover:bg-indigo-500 transition">Sejarah Prodi</a>
                     <a href="{{ route('pages', 'visi-misi-tujuan-strategi') }}" wire:navigate
                         class="block px-10 py-2 text-white hover:bg-indigo-500 transition">Visi, Misi, Tujuan,
-                        Subjektif</a>
+                        Strategi</a>
                     <a href="{{ route('pages', 'keunggulan') }}" wire:navigate
                         class="block px-10 py-2 text-white hover:bg-indigo-500 transition">Keunggulan</a>
                     <a href="{{ route('pages', 'akreditasi') }}" wire:navigate

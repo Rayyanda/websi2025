@@ -17,8 +17,10 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Auth;
 
 class ContentResource extends Resource
 {
@@ -42,6 +44,7 @@ class ContentResource extends Resource
                             ->required(),
                         Forms\Components\DateTimePicker::make('published_at'),
                     ])
+                    ->searchable()
                     ->required(),
                 Forms\Components\TextInput::make('sub_title')
                     ->maxLength(255),
@@ -281,4 +284,69 @@ class ContentResource extends Resource
             'pages' => Pages\Content::route('home')
         ];
     }
+
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('create Content');
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::user()?->can('view-any Content'); // null-safe
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::user()?->can('delete Content');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return Auth::user()?->can('delete-any Content');
+    }
+
+    public static function canForceDelete(Model $record): bool
+    {
+        return Auth::user()?->can('force-delete Content');
+    }
+
+    public static function canForceDeleteAny(): bool
+    {
+        return Auth::user()?->can('force-delete-any Content');
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::user()?->can('update Content');
+    }
+
+    public static function canEditAny(): bool
+    {
+        return Auth::user()?->can('update-any Content');
+    }
+
+    public static function canRestore(Model $record): bool
+    {
+        return Auth::user()?->can('restore Content');
+    }
+
+    public static function canRestoreAny(): bool
+    {
+        return Auth::user()?->can('restore-any Content');
+    }
+
+    public static function canForceRestore(Model $record): bool
+    {
+        return Auth::user()?->can('force-restore Content');
+    }
+
+    public static function canForceRestoreAny(): bool
+    {
+        return Auth::user()?->can('force-restore-any Content');
+    }
+
+
+
+
+
 }

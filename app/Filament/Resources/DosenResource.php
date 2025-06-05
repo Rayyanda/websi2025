@@ -11,7 +11,9 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class DosenResource extends Resource
 {
@@ -43,8 +45,8 @@ class DosenResource extends Resource
                 Forms\Components\Select::make('sertifikasi_dosen')
                     ->label('Sertifikasi Dosen')
                     ->options([
-                        "Memiliki"=>'Memiliki',
-                        "Belum Memiliki"=>'Belum Memiliki',
+                        "Memiliki" => 'Memiliki',
+                        "Belum Memiliki" => 'Belum Memiliki',
                     ])
                     ->required(),
                 Forms\Components\FileUpload::make('image')
@@ -109,5 +111,65 @@ class DosenResource extends Resource
             'create' => Pages\CreateDosen::route('/create'),
             'edit' => Pages\EditDosen::route('/{record}/edit'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('create Dosen');
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::user()?->can('view-any Dosen'); // null-safe
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::user()?->can('delete Dosen');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return Auth::user()?->can('delete-any Dosen');
+    }
+
+    public static function canForceDelete(Model $record): bool
+    {
+        return Auth::user()?->can('force-delete Dosen');
+    }
+
+    public static function canForceDeleteAny(): bool
+    {
+        return Auth::user()?->can('force-delete-any Dosen');
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::user()?->can('update Dosen');
+    }
+
+    public static function canEditAny(): bool
+    {
+        return Auth::user()?->can('update-any Dosen');
+    }
+
+    public static function canRestore(Model $record): bool
+    {
+        return Auth::user()?->can('restore Dosen');
+    }
+
+    public static function canRestoreAny(): bool
+    {
+        return Auth::user()?->can('restore-any Dosen');
+    }
+
+    public static function canForceRestore(Model $record): bool
+    {
+        return Auth::user()?->can('force-restore Dosen');
+    }
+
+    public static function canForceRestoreAny(): bool
+    {
+        return Auth::user()?->can('force-restore-any Dosen');
     }
 }

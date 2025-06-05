@@ -8,6 +8,14 @@ use Filament\Support\Facades\FilamentColor;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 
+use App\Policies\PermissionPolicy;
+use Illuminate\Support\Facades\Gate;
+//use Illuminate\Auth\Access\Gate;
+use Spatie\Permission\Models\Role;
+use Spatie\Permission\Models\Permission;
+
+
+
 class AppServiceProvider extends ServiceProvider
 {
     /**
@@ -16,6 +24,7 @@ class AppServiceProvider extends ServiceProvider
     public function register(): void
     {
         //
+
     }
 
     /**
@@ -23,6 +32,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        // Gate::policy(Role::class, RolePolicy::class);
+        // Gate::policy(Permission::class,PermissionPolicy::class);
         //
         View::composer('layouts.app',function($view){
             $view->with('kalender',KalenderAkademik::select('slug')->groupBy('slug')->get());

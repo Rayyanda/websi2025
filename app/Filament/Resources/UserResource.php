@@ -11,7 +11,9 @@ use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Support\Facades\Auth;
 
 class UserResource extends Resource
 {
@@ -44,6 +46,7 @@ class UserResource extends Resource
                     ->required()
                     ->maxLength(255)
                     ->default('admin'),
+                Forms\Components\Select::make('roles')->multiple()->relationship('roles', 'name')
             ]);
     }
 
@@ -97,4 +100,65 @@ class UserResource extends Resource
             'edit' => Pages\EditUser::route('/{record}/edit'),
         ];
     }
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('create User');
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::user()?->can('view-any User'); // null-safe
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::user()?->can('delete User');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return Auth::user()?->can('delete-any User');
+    }
+
+    public static function canForceDelete(Model $record): bool
+    {
+        return Auth::user()?->can('force-delete User');
+    }
+
+    public static function canForceDeleteAny(): bool
+    {
+        return Auth::user()?->can('force-delete-any User');
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::user()?->can('update User');
+    }
+
+    public static function canEditAny(): bool
+    {
+        return Auth::user()?->can('update-any User');
+    }
+
+    public static function canRestore(Model $record): bool
+    {
+        return Auth::user()?->can('restore User');
+    }
+
+    public static function canRestoreAny(): bool
+    {
+        return Auth::user()?->can('restore-any User');
+    }
+
+    public static function canForceRestore(Model $record): bool
+    {
+        return Auth::user()?->can('force-restore User');
+    }
+
+    public static function canForceRestoreAny(): bool
+    {
+        return Auth::user()?->can('force-restore-any User');
+    }
+
+
 }

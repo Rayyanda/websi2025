@@ -12,6 +12,8 @@ use Filament\Tables;
 use Filament\Tables\Table;
 use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Support\Facades\Auth;
 
 class KalenderAkademikResource extends Resource
 {
@@ -86,6 +88,7 @@ class KalenderAkademikResource extends Resource
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
+                Tables\Actions\DeleteAction::make()
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
@@ -109,5 +112,65 @@ class KalenderAkademikResource extends Resource
             'create' => Pages\CreateKalenderAkademik::route('/create'),
             'edit' => Pages\EditKalenderAkademik::route('/{record}/edit'),
         ];
+    }
+
+    public static function canCreate(): bool
+    {
+        return auth()->user()->can('create KalenderAkademik');
+    }
+
+    public static function canViewAny(): bool
+    {
+        return Auth::user()?->can('view-any KalenderAkademik'); // null-safe
+    }
+
+    public static function canDelete(Model $record): bool
+    {
+        return Auth::user()?->can('delete KalenderAkademik');
+    }
+
+    public static function canDeleteAny(): bool
+    {
+        return Auth::user()?->can('delete-any KalenderAkademik');
+    }
+
+    public static function canForceDelete(Model $record): bool
+    {
+        return Auth::user()?->can('force-delete KalenderAkademik');
+    }
+
+    public static function canForceDeleteAny(): bool
+    {
+        return Auth::user()?->can('force-delete-any KalenderAkademik');
+    }
+
+    public static function canEdit(Model $record): bool
+    {
+        return Auth::user()?->can('update KalenderAkademik');
+    }
+
+    public static function canEditAny(): bool
+    {
+        return Auth::user()?->can('update-any KalenderAkademik');
+    }
+
+    public static function canRestore(Model $record): bool
+    {
+        return Auth::user()?->can('restore KalenderAkademik');
+    }
+
+    public static function canRestoreAny(): bool
+    {
+        return Auth::user()?->can('restore-any KalenderAkademik');
+    }
+
+    public static function canForceRestore(Model $record): bool
+    {
+        return Auth::user()?->can('force-restore KalenderAkademik');
+    }
+
+    public static function canForceRestoreAny(): bool
+    {
+        return Auth::user()?->can('force-restore-any KalenderAkademik');
     }
 }

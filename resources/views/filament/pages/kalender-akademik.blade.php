@@ -13,32 +13,27 @@
 @endphp
 
 <div class="overflow-x-auto my-4">
-    <h3 class="text-lg font-bold mb-2">Kalender Akademik Terbaru</h3>
-    {{-- <ul class="list-disc pl-5 text-sm text-gray-700">
-        @forelse ($kalenders as $item)
-            <li>{{ $item->judul }} ({{ $item->tanggal_mulai }} s/d {{ $item->tanggal_selesai }})</li>
-        @empty
-            <li>Tidak ada data</li>
-        @endforelse
-    </ul> --}}
-    <table class="min-w-full divide-y divide-gray-200 border border-gray-300 rounded">
-        <thead class="bg-gray-100" >
+    <h3 class="text-lg font-bold mb-2 text-gray-900 dark:text-gray-100">Kalender Akademik Terbaru</h3>
+    <table class="min-w-full divide-y divide-gray-200 dark:divide-gray-700 border border-gray-300 dark:border-gray-600 rounded">
+        <thead class="bg-gray-100 dark:bg-gray-700">
             <tr>
-                <th>Kegiatan</th>
-                <th>Tgl Mulai</th>
-                <th>Tgl Selesai</th>
-                <th>Semester</th>
-                <th>Keterangan</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Tahun Ajaran</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Kegiatan</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Tgl Mulai</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Tgl Selesai</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Semester</th>
+                <th class="px-4 py-2 text-left text-xs font-medium text-gray-700 dark:text-gray-300 uppercase tracking-wider border border-gray-300 dark:border-gray-600">Keterangan</th>
             </tr>
         </thead>
-        <tbody class="bg-white divide-y divide-gray-200" >
+        <tbody class="bg-white dark:bg-gray-800 divide-y divide-gray-200 dark:divide-gray-700">
             @foreach ($kalenders as $item)
-                <tr>
-                    <td class="px-4 py-2 text-sm text-black border border-gray-300" >{{ $item->kegiatan }}</td>
-                    <td class="px-4 py-2 text-sm text-black border border-gray-300">{{ $item->tgl_mulai }}</td>
-                    <td class="px-4 py-2 text-sm text-black border border-gray-300" >{{ $item->tgl_selesai }}</td>
-                    <td class="px-4 py-2 text-sm text-black border border-gray-300" >{{ $item->semester }}</td>
-                    <td class="px-4 py-2 text-sm text-black border border-gray-300">{{ $item->keterangan }}</td>
+                <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tahunAjaran->tahun_ajaran }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->kegiatan }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tgl_mulai }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tgl_selesai }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->semester }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->keterangan }}</td>
                 </tr>
             @endforeach
         </tbody>
