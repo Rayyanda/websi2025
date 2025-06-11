@@ -14,6 +14,12 @@ class ListKalenderAkademiks extends ListRecords
     {
         return [
             Actions\CreateAction::make(),
+            Actions\Action::make('import')
+                ->label('Import Excel')
+                ->url(ImportKalender::getUrl()),
+            // Actions\Action::make('export')
+            //     ->label('Export Excel')
+            //     ->url(KalenderAkademikExport::getUrl())
         ];
     }
 }

@@ -14,6 +14,7 @@ use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Str;
 use App\Filament\Resources\ContentResource\Pages as ContentResou;
+use App\Filament\Widgets\StatsOverview;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Facades\Auth;
 
@@ -90,6 +91,13 @@ class PageResource extends Resource
         return [
         ];
     }
+
+    public static function getWidgets(): array
+{
+    return [
+        StatsOverview::class
+    ];
+}
 
     public static function getPages(): array
     {

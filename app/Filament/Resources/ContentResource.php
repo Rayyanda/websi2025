@@ -21,6 +21,7 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletingScope;
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\Auth;
+use Filament\Tables\Filters\Filter;
 
 class ContentResource extends Resource
 {
@@ -241,6 +242,10 @@ class ContentResource extends Resource
                     ->searchable(),
                 Tables\Columns\IconColumn::make('is_active')
                     ->boolean(),
+                Tables\Columns\TextColumn::make('views_count')
+                    ->label('Kunjungan')
+                    ->sortable()
+                    ->numeric(),
                 Tables\Columns\TextColumn::make('published_at')
                     ->dateTime()
                     ->sortable(),
@@ -255,6 +260,9 @@ class ContentResource extends Resource
             ])
             ->filters([
                 //
+                Filter::make('most_viewed')
+                ->label('Paling Banyak Dikunjungi')
+                ->query(fn (Builder $query) => $query->orderBy('views_count', 'desc')),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),

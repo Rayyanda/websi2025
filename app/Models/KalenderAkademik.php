@@ -15,6 +15,7 @@ class KalenderAkademik extends Model
         'kegiatan',
         'tgl_mulai',
         'tgl_selesai',
+        'semester',
         'keterangan'
     ];
     protected static function booted()

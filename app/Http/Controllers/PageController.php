@@ -18,6 +18,7 @@ class PageController extends Controller
         $category = PostCategory::all();
         $pg = Page::where('slug','=',$slug)->first();
         $data = Content::where('page_id','=',$pg->id)->orderBy('published_at','asc')->get();
+        Content::where('page_id','=',$pg->id)->increment('views_count');
         return view('pages.index', compact('data','category'));
     }
 

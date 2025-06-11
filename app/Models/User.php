@@ -33,11 +33,7 @@ class User extends Authenticatable implements FilamentUser
     public function canAccessPanel(Panel $panel): bool
     {
         //return str_ends_with($this->email, '@yourdomain.com') && $this->hasVerifiedEmail();
-        return in_array($this->email, [
-            'ekayuniastuty@yahoo.com',
-            'tafhimquran512@gmail.com',
-            'si.unsada@gmail.com',
-        ]);
+         return $this->hasAnyRole(['admin', 'Staff','dosen']);
     }
     /**
      * The attributes that should be hidden for serialization.

@@ -30,8 +30,8 @@
                 <tr class="hover:bg-gray-50 dark:hover:bg-gray-700">
                     <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tahunAjaran->tahun_ajaran }}</td>
                     <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->kegiatan }}</td>
-                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tgl_mulai }}</td>
-                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->tgl_selesai }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ \Carbon\Carbon::parse($item->tgl_mulai)->format('d F Y') }}</td>
+                    <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ \Carbon\Carbon::parse($item->tgl_selesai)->format('d F Y') }}</td>
                     <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->semester }}</td>
                     <td class="px-4 py-2 text-sm text-gray-800 dark:text-gray-200 border border-gray-300 dark:border-gray-600">{{ $item->keterangan }}</td>
                 </tr>

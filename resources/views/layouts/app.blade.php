@@ -497,10 +497,11 @@
         <div class="bg-gradient-to-tr from-blue-100 via-white to-green-100 py-20 flex items-center justify-center px-4">
             <div class="bg-white/90 backdrop-blur-lg rounded-xl shadow-lg max-w-lg w-full p-8">
                 <h2 class="text-3xl font-extrabold text-gray-900 mb-6 text-center">Hubungi Kami</h2>
-                <form class="space-y-6" action="#" method="POST" novalidate>
+                <form class="space-y-6" action="{{ route('comment.new') }}" method="POST">
+                    @csrf
                     <div>
                         <label for="name" class="block text-sm font-semibold text-gray-700">Nama Anda</label>
-                        <input type="text" id="name" name="name" required
+                        <input type="text" id="name" name="author_name" required
                             placeholder="Masukkan nama Anda"
                             class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 focus:border-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50 transition" />
                     </div>
@@ -511,7 +512,7 @@
                     </div>
                     <div>
                         <label for="comment" class="block text-sm font-semibold text-gray-700">Pesan</label>
-                        <textarea id="comment" name="comment" rows="5" required
+                        <textarea id="comment" name="content" rows="5" required
                             placeholder="Tulis komentar atau saran Anda di sini..."
                             class="mt-1 block w-full rounded-md border border-gray-300 shadow-sm py-2 px-3 resize-none focus:border-indigo-500 focus:ring focus:ring-indigo-300 focus:ring-opacity-50 transition"></textarea>
                     </div>
@@ -522,12 +523,15 @@
                         </button>
                     </div>
                 </form>
+                @session('success')
+                <p>{{ session('success') }}</p>
+                @endsession
             </div>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-300 py-6 fixed bottom-0 z-50 w-full">
+    <footer class="bg-gray-800 text-gray-300 py-6 w-full">
         <div class="container mx-auto px-6 text-center text-sm">
             &copy; 2024 Program Studi Sistem Informasi. Semua hak cipta dilindungi.
         </div>

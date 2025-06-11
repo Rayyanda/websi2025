@@ -4,6 +4,18 @@
     $columnsToShow = $block['data']['columns'] ?? [];
     $filters = $block['data']['filters'] ?? [];
 
+    // Dapatkan instance model untuk memeriksa tipe kolom
+    $modelInstance = new $modelClass();
+    $table = $modelInstance->getTable();
+
+    // Dapatkan informasi kolom dari schema database
+    $columnTypes = [];
+    foreach ($columnsToShow as $col) {
+        if (Schema::hasColumn($table, $col)) {
+            $columnTypes[$col] = DB::getSchemaBuilder()->getColumnType($table, $col);
+        }
+    }
+
     $query = $modelClass::select($columnsToShow);
 
     // Tambahkan filter dinamis
@@ -22,11 +34,11 @@
     }
 
     // Tambahkan contoh filter default (misal slug)
-    if ($slug && Schema::hasColumn((new $modelClass())->getTable(), 'slug')) {
+    if ($slug && Schema::hasColumn($table, 'slug')) {
         $query->where('slug', $slug);
     }
 
-    $modelData = $query->get()->toArray();
+    $modelData = $query->get();
 @endphp
 
 @if (count($modelData))
@@ -46,7 +58,11 @@
                     <tr>
                         @foreach ($columnsToShow as $col)
                             <td class="px-4 py-2 text-sm text-gray-800 border border-gray-300">
-                                {{ $row[$col] }}
+                                @if (isset($columnTypes[$col]) && in_array($columnTypes[$col], ['date', 'datetime', 'timestamp']))
+                                    {{ \Carbon\Carbon::parse($row->$col)->format('d F Y') }}
+                                @else
+                                    {{ $row->$col }}
+                                @endif
                             </td>
                         @endforeach
                     </tr>

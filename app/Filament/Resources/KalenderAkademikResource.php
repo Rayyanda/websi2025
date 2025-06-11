@@ -3,6 +3,8 @@
 namespace App\Filament\Resources;
 
 use App\Filament\Resources\KalenderAkademikResource\Pages;
+use App\Filament\Resources\KalenderAkademikResource\Pages\ImportKalender;
+use App\Filament\Resources\KalenderAkademikResource\Pages\KalenderAkademikExport;
 use App\Filament\Resources\KalenderAkademikResource\RelationManagers;
 use App\Models\KalenderAkademik;
 use Filament\Forms;
@@ -38,24 +40,26 @@ class KalenderAkademikResource extends Resource
                         Forms\Components\TextInput::make('keterangan'),
                     ])
                     ->columnSpanFull(),
-                Forms\Components\TextInput::make('kegiatan')
-                    ->required()
-                    ->maxLength(255),
-                Forms\Components\Select::make('semester')
-                    ->options([
-                        'Gasal',
-                        'Genap'
-                    ])
-                    ->required(),
                 Forms\Components\DatePicker::make('tgl_mulai')
                     ->required(),
                 Forms\Components\DatePicker::make('tgl_selesai')
                     ->required(),
+                Forms\Components\TextInput::make('kegiatan')
+                    ->required()
+                    ->maxLength(255),
                 Forms\Components\Textarea::make('keterangan')
                     ->required()
                     ->columnSpanFull(),
+                Forms\Components\Select::make('semester')
+                    ->options([
+                        'Gasal' => 'Gasal',
+                        'Genap' => 'Genap'
+                    ])
+                    ->required(),
                 Forms\Components\View::make('filament.pages.kalender-akademik')
-                    ->columnSpanFull(),
+                ->columnSpanFull(),
+                // Forms\Components\View::make('filament.pages.import-kalender')
+                //Forms\Components\View::make('filament.pages.import-kalender')
             ]);
     }
 
@@ -70,6 +74,8 @@ class KalenderAkademikResource extends Resource
                     ->searchable(),
                 Tables\Columns\TextColumn::make('tgl_mulai')
                     ->date()
+                    ->sortable(),
+                Tables\Columns\TextColumn::make('semester')
                     ->sortable(),
                 Tables\Columns\TextColumn::make('tgl_selesai')
                     ->date()
@@ -111,6 +117,8 @@ class KalenderAkademikResource extends Resource
             'index' => Pages\ListKalenderAkademiks::route('/'),
             'create' => Pages\CreateKalenderAkademik::route('/create'),
             'edit' => Pages\EditKalenderAkademik::route('/{record}/edit'),
+            'import' => ImportKalender::route('/import'),
+            'export' => KalenderAkademikExport::route('/export')
         ];
     }
 

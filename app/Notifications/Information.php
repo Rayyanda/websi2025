@@ -6,6 +6,7 @@ use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Notifications\Messages\MailMessage;
 use Illuminate\Notifications\Notification;
+use App\Models\User;
 
 class Information extends Notification
 {
@@ -39,6 +40,13 @@ class Information extends Notification
             ->action('Notification Action', url('/'))
             ->line('Thank you for using our application!');
     }
+
+    // public function toDatabase(User $notifiable): array
+    // {
+    //     return Notification::make()
+    //         ->title('Saved successfully')
+    //         ->getDatabaseMessage();
+    // }
 
     /**
      * Get the array representation of the notification.
