@@ -33,6 +33,10 @@
                                 @case('posts')
                                     @include('blocks.' . $block['type'],['data'=> $block['data']])
                                     @break
+
+                                @case('form_submissions')
+                                    @include('blocks.' . $block['type'], ['data'=>$block['data']])
+                                    @break
                                     {{-- @php
                                         $posts = App\Models\Post::whereIn('id', $block['data']['posts'] ?? [])->get();
                                     @endphp

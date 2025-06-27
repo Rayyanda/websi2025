@@ -68,6 +68,7 @@ class ContentResource extends Resource
                                 'columns' => 'Kolom Dinamis',
                                 'table' => 'Table',
                                 'posts' => 'Posts',
+                                'form_submissions' => 'Form Submissions',
                             ])
                             ->reactive(),
 
@@ -103,6 +104,16 @@ class ContentResource extends Resource
                                             ->visibility('public')
                                             ->multiple()
                                     ],
+                                    'form_submissions' => [
+                                        Forms\Components\Select::make('data.form_id')
+                                            ->label('Pilih Form')
+                                            ->options(\App\Models\Forms::all()->pluck('title', 'form_id'))
+                                            ->required(),
+                                        Forms\Components\TextInput::make('data.limit')
+                                            ->label('Jumlah Data Ditampilkan')
+                                            ->default(5),
+                                    ],
+
                                     'table' => [
                                         Forms\Components\Select::make('data.model')
                                             ->label('Pilih Model')
@@ -261,8 +272,8 @@ class ContentResource extends Resource
             ->filters([
                 //
                 Filter::make('most_viewed')
-                ->label('Paling Banyak Dikunjungi')
-                ->query(fn (Builder $query) => $query->orderBy('views_count', 'desc')),
+                    ->label('Paling Banyak Dikunjungi')
+                    ->query(fn(Builder $query) => $query->orderBy('views_count', 'desc')),
             ])
             ->actions([
                 Tables\Actions\EditAction::make(),
@@ -352,9 +363,4 @@ class ContentResource extends Resource
     {
         return Auth::user()?->can('force-restore-any Content');
     }
-
-
-
-
-
 }
