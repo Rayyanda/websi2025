@@ -37,6 +37,7 @@ class ContentResource extends Resource
     public static function form(Form $form): Form
     {
         return $form
+            
             ->schema([
                 Forms\Components\Select::make('page_id')
                     ->relationship('page', 'slug')
@@ -238,7 +239,7 @@ class ContentResource extends Resource
                             }),
                     ])
                     ->columnSpanFull()
-            ]);
+                ]);
     }
 
     public static function table(Table $table): Table
@@ -306,7 +307,7 @@ class ContentResource extends Resource
 
     public static function canCreate(): bool
     {
-        return auth()->user()->can('create Content');
+        return Auth::user()?->can('create Content');
     }
 
     public static function canViewAny(): bool

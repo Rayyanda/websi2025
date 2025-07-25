@@ -528,7 +528,9 @@
                 @endsession
             </div>
         </div>
+           
     </div>
+
 
     <!-- Footer -->
     <footer class="bg-gray-800 text-gray-300 py-6 w-full">
@@ -539,6 +541,24 @@
     <script src="{{ asset('js/mobile.js') }}"></script>
     @livewireScripts
     @yield('page-script')
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const visitStart = Date.now();
+
+        window.addEventListener('beforeunload', function () {
+            const duration = Math.floor((Date.now() - visitStart) / 1000); // in seconds
+            console.log(`Visit duration: ${duration} seconds`);
+            $.ajax({
+                url: "/visit-duration",
+                method: "POST",
+                data: {
+                    duration: duration,
+                    ip_address: "{{ request()->ip() }}",
+                    _token: '{{ csrf_token() }}' // penting!
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

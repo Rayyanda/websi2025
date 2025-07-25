@@ -115,7 +115,7 @@ class DosenResource extends Resource
 
     public static function canCreate(): bool
     {
-        return auth()->user()->can('create Dosen');
+        return Auth::user()?->can('create Dosen');
     }
 
     public static function canViewAny(): bool
