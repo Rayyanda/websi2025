@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jun 22, 2025 at 11:01 PM
+-- Generation Time: Jul 30, 2025 at 08:57 AM
 -- Server version: 8.0.30
--- PHP Version: 8.1.10
+-- PHP Version: 8.3.8
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -28,8 +28,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cache` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `value` mediumtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `value` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -38,9 +38,9 @@ CREATE TABLE `cache` (
 --
 
 INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
-('sistem_informasi_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1750339878),
-('sistem_informasi_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1750339878;', 1750339878),
-('sistem_informasi_cache_spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:236:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Add Pages\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:16:\"view-any Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:16:\"view-any Content\";s:1:\"c\";s:3:\"api\";}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:12:\"view Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:4;a:3:{s:1:\"a\";i:5;s:1:\"b\";s:12:\"view Content\";s:1:\"c\";s:3:\"api\";}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:14:\"create Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:6;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:14:\"create Content\";s:1:\"c\";s:3:\"api\";}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:14:\"update Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:8;a:3:{s:1:\"a\";i:9;s:1:\"b\";s:14:\"update Content\";s:1:\"c\";s:3:\"api\";}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:14:\"delete Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:10;a:3:{s:1:\"a\";i:11;s:1:\"b\";s:14:\"delete Content\";s:1:\"c\";s:3:\"api\";}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:18:\"delete-any Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:12;a:3:{s:1:\"a\";i:13;s:1:\"b\";s:18:\"delete-any Content\";s:1:\"c\";s:3:\"api\";}i:13;a:3:{s:1:\"a\";i:14;s:1:\"b\";s:17:\"replicate Content\";s:1:\"c\";s:3:\"web\";}i:14;a:3:{s:1:\"a\";i:15;s:1:\"b\";s:17:\"replicate Content\";s:1:\"c\";s:3:\"api\";}i:15;a:3:{s:1:\"a\";i:16;s:1:\"b\";s:15:\"restore Content\";s:1:\"c\";s:3:\"web\";}i:16;a:3:{s:1:\"a\";i:17;s:1:\"b\";s:15:\"restore Content\";s:1:\"c\";s:3:\"api\";}i:17;a:3:{s:1:\"a\";i:18;s:1:\"b\";s:19:\"restore-any Content\";s:1:\"c\";s:3:\"web\";}i:18;a:3:{s:1:\"a\";i:19;s:1:\"b\";s:19:\"restore-any Content\";s:1:\"c\";s:3:\"api\";}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:15:\"reorder Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:3:{s:1:\"a\";i:21;s:1:\"b\";s:15:\"reorder Content\";s:1:\"c\";s:3:\"api\";}i:21;a:3:{s:1:\"a\";i:22;s:1:\"b\";s:20:\"force-delete Content\";s:1:\"c\";s:3:\"web\";}i:22;a:3:{s:1:\"a\";i:23;s:1:\"b\";s:20:\"force-delete Content\";s:1:\"c\";s:3:\"api\";}i:23;a:3:{s:1:\"a\";i:24;s:1:\"b\";s:24:\"force-delete-any Content\";s:1:\"c\";s:3:\"web\";}i:24;a:3:{s:1:\"a\";i:25;s:1:\"b\";s:24:\"force-delete-any Content\";s:1:\"c\";s:3:\"api\";}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:14:\"view-any Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:26;a:3:{s:1:\"a\";i:27;s:1:\"b\";s:14:\"view-any Dosen\";s:1:\"c\";s:3:\"api\";}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:10:\"view Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:28;a:3:{s:1:\"a\";i:29;s:1:\"b\";s:10:\"view Dosen\";s:1:\"c\";s:3:\"api\";}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:12:\"create Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:30;a:3:{s:1:\"a\";i:31;s:1:\"b\";s:12:\"create Dosen\";s:1:\"c\";s:3:\"api\";}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:12:\"update Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:3:{s:1:\"a\";i:33;s:1:\"b\";s:12:\"update Dosen\";s:1:\"c\";s:3:\"api\";}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:12:\"delete Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:34;a:3:{s:1:\"a\";i:35;s:1:\"b\";s:12:\"delete Dosen\";s:1:\"c\";s:3:\"api\";}i:35;a:3:{s:1:\"a\";i:36;s:1:\"b\";s:16:\"delete-any Dosen\";s:1:\"c\";s:3:\"web\";}i:36;a:3:{s:1:\"a\";i:37;s:1:\"b\";s:16:\"delete-any Dosen\";s:1:\"c\";s:3:\"api\";}i:37;a:3:{s:1:\"a\";i:38;s:1:\"b\";s:15:\"replicate Dosen\";s:1:\"c\";s:3:\"web\";}i:38;a:3:{s:1:\"a\";i:39;s:1:\"b\";s:15:\"replicate Dosen\";s:1:\"c\";s:3:\"api\";}i:39;a:4:{s:1:\"a\";i:40;s:1:\"b\";s:13:\"restore Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:3:{s:1:\"a\";i:41;s:1:\"b\";s:13:\"restore Dosen\";s:1:\"c\";s:3:\"api\";}i:41;a:3:{s:1:\"a\";i:42;s:1:\"b\";s:17:\"restore-any Dosen\";s:1:\"c\";s:3:\"web\";}i:42;a:3:{s:1:\"a\";i:43;s:1:\"b\";s:17:\"restore-any Dosen\";s:1:\"c\";s:3:\"api\";}i:43;a:3:{s:1:\"a\";i:44;s:1:\"b\";s:13:\"reorder Dosen\";s:1:\"c\";s:3:\"web\";}i:44;a:3:{s:1:\"a\";i:45;s:1:\"b\";s:13:\"reorder Dosen\";s:1:\"c\";s:3:\"api\";}i:45;a:3:{s:1:\"a\";i:46;s:1:\"b\";s:18:\"force-delete Dosen\";s:1:\"c\";s:3:\"web\";}i:46;a:3:{s:1:\"a\";i:47;s:1:\"b\";s:18:\"force-delete Dosen\";s:1:\"c\";s:3:\"api\";}i:47;a:3:{s:1:\"a\";i:48;s:1:\"b\";s:22:\"force-delete-any Dosen\";s:1:\"c\";s:3:\"web\";}i:48;a:3:{s:1:\"a\";i:49;s:1:\"b\";s:22:\"force-delete-any Dosen\";s:1:\"c\";s:3:\"api\";}i:49;a:4:{s:1:\"a\";i:50;s:1:\"b\";s:25:\"view-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:50;a:3:{s:1:\"a\";i:51;s:1:\"b\";s:25:\"view-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:51;a:4:{s:1:\"a\";i:52;s:1:\"b\";s:21:\"view KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:52;a:3:{s:1:\"a\";i:53;s:1:\"b\";s:21:\"view KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:53;a:4:{s:1:\"a\";i:54;s:1:\"b\";s:23:\"create KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:54;a:3:{s:1:\"a\";i:55;s:1:\"b\";s:23:\"create KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:55;a:4:{s:1:\"a\";i:56;s:1:\"b\";s:23:\"update KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:56;a:3:{s:1:\"a\";i:57;s:1:\"b\";s:23:\"update KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:57;a:4:{s:1:\"a\";i:58;s:1:\"b\";s:23:\"delete KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:58;a:3:{s:1:\"a\";i:59;s:1:\"b\";s:23:\"delete KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:59;a:4:{s:1:\"a\";i:60;s:1:\"b\";s:27:\"delete-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:60;a:3:{s:1:\"a\";i:61;s:1:\"b\";s:27:\"delete-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:61;a:3:{s:1:\"a\";i:62;s:1:\"b\";s:26:\"replicate KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:63;s:1:\"b\";s:26:\"replicate KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:63;a:3:{s:1:\"a\";i:64;s:1:\"b\";s:24:\"restore KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:65;s:1:\"b\";s:24:\"restore KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:65;a:4:{s:1:\"a\";i:66;s:1:\"b\";s:28:\"restore-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:66;a:3:{s:1:\"a\";i:67;s:1:\"b\";s:28:\"restore-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:67;a:4:{s:1:\"a\";i:68;s:1:\"b\";s:24:\"reorder KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:68;a:3:{s:1:\"a\";i:69;s:1:\"b\";s:24:\"reorder KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:69;a:3:{s:1:\"a\";i:70;s:1:\"b\";s:29:\"force-delete KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:71;s:1:\"b\";s:29:\"force-delete KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:71;a:3:{s:1:\"a\";i:72;s:1:\"b\";s:33:\"force-delete-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:72;a:3:{s:1:\"a\";i:73;s:1:\"b\";s:33:\"force-delete-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:73;a:4:{s:1:\"a\";i:74;s:1:\"b\";s:13:\"view-any Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:74;a:3:{s:1:\"a\";i:75;s:1:\"b\";s:13:\"view-any Page\";s:1:\"c\";s:3:\"api\";}i:75;a:4:{s:1:\"a\";i:76;s:1:\"b\";s:9:\"view Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:76;a:3:{s:1:\"a\";i:77;s:1:\"b\";s:9:\"view Page\";s:1:\"c\";s:3:\"api\";}i:77;a:4:{s:1:\"a\";i:78;s:1:\"b\";s:11:\"create Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:78;a:3:{s:1:\"a\";i:79;s:1:\"b\";s:11:\"create Page\";s:1:\"c\";s:3:\"api\";}i:79;a:4:{s:1:\"a\";i:80;s:1:\"b\";s:11:\"update Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:80;a:3:{s:1:\"a\";i:81;s:1:\"b\";s:11:\"update Page\";s:1:\"c\";s:3:\"api\";}i:81;a:4:{s:1:\"a\";i:82;s:1:\"b\";s:11:\"delete Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:82;a:3:{s:1:\"a\";i:83;s:1:\"b\";s:11:\"delete Page\";s:1:\"c\";s:3:\"api\";}i:83;a:3:{s:1:\"a\";i:84;s:1:\"b\";s:15:\"delete-any Page\";s:1:\"c\";s:3:\"web\";}i:84;a:3:{s:1:\"a\";i:85;s:1:\"b\";s:15:\"delete-any Page\";s:1:\"c\";s:3:\"api\";}i:85;a:3:{s:1:\"a\";i:86;s:1:\"b\";s:14:\"replicate Page\";s:1:\"c\";s:3:\"web\";}i:86;a:3:{s:1:\"a\";i:87;s:1:\"b\";s:14:\"replicate Page\";s:1:\"c\";s:3:\"api\";}i:87;a:3:{s:1:\"a\";i:88;s:1:\"b\";s:12:\"restore Page\";s:1:\"c\";s:3:\"web\";}i:88;a:3:{s:1:\"a\";i:89;s:1:\"b\";s:12:\"restore Page\";s:1:\"c\";s:3:\"api\";}i:89;a:3:{s:1:\"a\";i:90;s:1:\"b\";s:16:\"restore-any Page\";s:1:\"c\";s:3:\"web\";}i:90;a:3:{s:1:\"a\";i:91;s:1:\"b\";s:16:\"restore-any Page\";s:1:\"c\";s:3:\"api\";}i:91;a:4:{s:1:\"a\";i:92;s:1:\"b\";s:12:\"reorder Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:92;a:3:{s:1:\"a\";i:93;s:1:\"b\";s:12:\"reorder Page\";s:1:\"c\";s:3:\"api\";}i:93;a:3:{s:1:\"a\";i:94;s:1:\"b\";s:17:\"force-delete Page\";s:1:\"c\";s:3:\"web\";}i:94;a:3:{s:1:\"a\";i:95;s:1:\"b\";s:17:\"force-delete Page\";s:1:\"c\";s:3:\"api\";}i:95;a:3:{s:1:\"a\";i:96;s:1:\"b\";s:21:\"force-delete-any Page\";s:1:\"c\";s:3:\"web\";}i:96;a:3:{s:1:\"a\";i:97;s:1:\"b\";s:21:\"force-delete-any Page\";s:1:\"c\";s:3:\"api\";}i:97;a:4:{s:1:\"a\";i:98;s:1:\"b\";s:13:\"view-any Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:98;a:3:{s:1:\"a\";i:99;s:1:\"b\";s:13:\"view-any Post\";s:1:\"c\";s:3:\"api\";}i:99;a:4:{s:1:\"a\";i:100;s:1:\"b\";s:9:\"view Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:100;a:3:{s:1:\"a\";i:101;s:1:\"b\";s:9:\"view Post\";s:1:\"c\";s:3:\"api\";}i:101;a:4:{s:1:\"a\";i:102;s:1:\"b\";s:11:\"create Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:102;a:3:{s:1:\"a\";i:103;s:1:\"b\";s:11:\"create Post\";s:1:\"c\";s:3:\"api\";}i:103;a:4:{s:1:\"a\";i:104;s:1:\"b\";s:11:\"update Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:104;a:3:{s:1:\"a\";i:105;s:1:\"b\";s:11:\"update Post\";s:1:\"c\";s:3:\"api\";}i:105;a:4:{s:1:\"a\";i:106;s:1:\"b\";s:11:\"delete Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:106;a:3:{s:1:\"a\";i:107;s:1:\"b\";s:11:\"delete Post\";s:1:\"c\";s:3:\"api\";}i:107;a:4:{s:1:\"a\";i:108;s:1:\"b\";s:15:\"delete-any Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:108;a:3:{s:1:\"a\";i:109;s:1:\"b\";s:15:\"delete-any Post\";s:1:\"c\";s:3:\"api\";}i:109;a:3:{s:1:\"a\";i:110;s:1:\"b\";s:14:\"replicate Post\";s:1:\"c\";s:3:\"web\";}i:110;a:3:{s:1:\"a\";i:111;s:1:\"b\";s:14:\"replicate Post\";s:1:\"c\";s:3:\"api\";}i:111;a:3:{s:1:\"a\";i:112;s:1:\"b\";s:12:\"restore Post\";s:1:\"c\";s:3:\"web\";}i:112;a:3:{s:1:\"a\";i:113;s:1:\"b\";s:12:\"restore Post\";s:1:\"c\";s:3:\"api\";}i:113;a:3:{s:1:\"a\";i:114;s:1:\"b\";s:16:\"restore-any Post\";s:1:\"c\";s:3:\"web\";}i:114;a:3:{s:1:\"a\";i:115;s:1:\"b\";s:16:\"restore-any Post\";s:1:\"c\";s:3:\"api\";}i:115;a:3:{s:1:\"a\";i:116;s:1:\"b\";s:12:\"reorder Post\";s:1:\"c\";s:3:\"web\";}i:116;a:3:{s:1:\"a\";i:117;s:1:\"b\";s:12:\"reorder Post\";s:1:\"c\";s:3:\"api\";}i:117;a:4:{s:1:\"a\";i:118;s:1:\"b\";s:17:\"force-delete Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:118;a:3:{s:1:\"a\";i:119;s:1:\"b\";s:17:\"force-delete Post\";s:1:\"c\";s:3:\"api\";}i:119;a:3:{s:1:\"a\";i:120;s:1:\"b\";s:21:\"force-delete-any Post\";s:1:\"c\";s:3:\"web\";}i:120;a:3:{s:1:\"a\";i:121;s:1:\"b\";s:21:\"force-delete-any Post\";s:1:\"c\";s:3:\"api\";}i:121;a:4:{s:1:\"a\";i:122;s:1:\"b\";s:21:\"view-any PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:122;a:3:{s:1:\"a\";i:123;s:1:\"b\";s:21:\"view-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:123;a:4:{s:1:\"a\";i:124;s:1:\"b\";s:17:\"view PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:124;a:3:{s:1:\"a\";i:125;s:1:\"b\";s:17:\"view PostCategory\";s:1:\"c\";s:3:\"api\";}i:125;a:4:{s:1:\"a\";i:126;s:1:\"b\";s:19:\"create PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:126;a:3:{s:1:\"a\";i:127;s:1:\"b\";s:19:\"create PostCategory\";s:1:\"c\";s:3:\"api\";}i:127;a:3:{s:1:\"a\";i:128;s:1:\"b\";s:19:\"update PostCategory\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:129;s:1:\"b\";s:19:\"update PostCategory\";s:1:\"c\";s:3:\"api\";}i:129;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:19:\"delete PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:130;a:3:{s:1:\"a\";i:131;s:1:\"b\";s:19:\"delete PostCategory\";s:1:\"c\";s:3:\"api\";}i:131;a:3:{s:1:\"a\";i:132;s:1:\"b\";s:23:\"delete-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:132;a:3:{s:1:\"a\";i:133;s:1:\"b\";s:23:\"delete-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:133;a:3:{s:1:\"a\";i:134;s:1:\"b\";s:22:\"replicate PostCategory\";s:1:\"c\";s:3:\"web\";}i:134;a:3:{s:1:\"a\";i:135;s:1:\"b\";s:22:\"replicate PostCategory\";s:1:\"c\";s:3:\"api\";}i:135;a:3:{s:1:\"a\";i:136;s:1:\"b\";s:20:\"restore PostCategory\";s:1:\"c\";s:3:\"web\";}i:136;a:3:{s:1:\"a\";i:137;s:1:\"b\";s:20:\"restore PostCategory\";s:1:\"c\";s:3:\"api\";}i:137;a:3:{s:1:\"a\";i:138;s:1:\"b\";s:24:\"restore-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:138;a:3:{s:1:\"a\";i:139;s:1:\"b\";s:24:\"restore-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:139;a:3:{s:1:\"a\";i:140;s:1:\"b\";s:20:\"reorder PostCategory\";s:1:\"c\";s:3:\"web\";}i:140;a:3:{s:1:\"a\";i:141;s:1:\"b\";s:20:\"reorder PostCategory\";s:1:\"c\";s:3:\"api\";}i:141;a:3:{s:1:\"a\";i:142;s:1:\"b\";s:25:\"force-delete PostCategory\";s:1:\"c\";s:3:\"web\";}i:142;a:3:{s:1:\"a\";i:143;s:1:\"b\";s:25:\"force-delete PostCategory\";s:1:\"c\";s:3:\"api\";}i:143;a:3:{s:1:\"a\";i:144;s:1:\"b\";s:29:\"force-delete-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:144;a:3:{s:1:\"a\";i:145;s:1:\"b\";s:29:\"force-delete-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:145;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"view-any TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:146;a:3:{s:1:\"a\";i:147;s:1:\"b\";s:20:\"view-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:147;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"view TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:148;a:3:{s:1:\"a\";i:149;s:1:\"b\";s:16:\"view TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:149;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:18:\"create TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:150;a:3:{s:1:\"a\";i:151;s:1:\"b\";s:18:\"create TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:151;a:3:{s:1:\"a\";i:152;s:1:\"b\";s:18:\"update TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:152;a:3:{s:1:\"a\";i:153;s:1:\"b\";s:18:\"update TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:153;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:18:\"delete TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:154;a:3:{s:1:\"a\";i:155;s:1:\"b\";s:18:\"delete TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:155;a:3:{s:1:\"a\";i:156;s:1:\"b\";s:22:\"delete-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:156;a:3:{s:1:\"a\";i:157;s:1:\"b\";s:22:\"delete-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:157;a:3:{s:1:\"a\";i:158;s:1:\"b\";s:21:\"replicate TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:158;a:3:{s:1:\"a\";i:159;s:1:\"b\";s:21:\"replicate TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:159;a:3:{s:1:\"a\";i:160;s:1:\"b\";s:19:\"restore TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:160;a:3:{s:1:\"a\";i:161;s:1:\"b\";s:19:\"restore TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:161;a:3:{s:1:\"a\";i:162;s:1:\"b\";s:23:\"restore-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:162;a:3:{s:1:\"a\";i:163;s:1:\"b\";s:23:\"restore-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:163;a:3:{s:1:\"a\";i:164;s:1:\"b\";s:19:\"reorder TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:164;a:3:{s:1:\"a\";i:165;s:1:\"b\";s:19:\"reorder TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:165;a:3:{s:1:\"a\";i:166;s:1:\"b\";s:24:\"force-delete TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:166;a:3:{s:1:\"a\";i:167;s:1:\"b\";s:24:\"force-delete TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:167;a:3:{s:1:\"a\";i:168;s:1:\"b\";s:28:\"force-delete-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:168;a:3:{s:1:\"a\";i:169;s:1:\"b\";s:28:\"force-delete-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:169;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:13:\"view-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:170;a:3:{s:1:\"a\";i:171;s:1:\"b\";s:13:\"view-any User\";s:1:\"c\";s:3:\"api\";}i:171;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:9:\"view User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:172;a:3:{s:1:\"a\";i:173;s:1:\"b\";s:9:\"view User\";s:1:\"c\";s:3:\"api\";}i:173;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:11:\"create User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:174;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:11:\"create User\";s:1:\"c\";s:3:\"api\";s:1:\"r\";a:1:{i:0;i:1;}}i:175;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:11:\"update User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:176;a:3:{s:1:\"a\";i:177;s:1:\"b\";s:11:\"update User\";s:1:\"c\";s:3:\"api\";}i:177;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:11:\"delete User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:178;a:3:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"delete User\";s:1:\"c\";s:3:\"api\";}i:179;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:15:\"delete-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:180;a:3:{s:1:\"a\";i:181;s:1:\"b\";s:15:\"delete-any User\";s:1:\"c\";s:3:\"api\";}i:181;a:3:{s:1:\"a\";i:182;s:1:\"b\";s:14:\"replicate User\";s:1:\"c\";s:3:\"web\";}i:182;a:3:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate User\";s:1:\"c\";s:3:\"api\";}i:183;a:3:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"restore User\";s:1:\"c\";s:3:\"web\";}i:184;a:3:{s:1:\"a\";i:185;s:1:\"b\";s:12:\"restore User\";s:1:\"c\";s:3:\"api\";}i:185;a:3:{s:1:\"a\";i:186;s:1:\"b\";s:16:\"restore-any User\";s:1:\"c\";s:3:\"web\";}i:186;a:3:{s:1:\"a\";i:187;s:1:\"b\";s:16:\"restore-any User\";s:1:\"c\";s:3:\"api\";}i:187;a:3:{s:1:\"a\";i:188;s:1:\"b\";s:12:\"reorder User\";s:1:\"c\";s:3:\"web\";}i:188;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"reorder User\";s:1:\"c\";s:3:\"api\";}i:189;a:4:{s:1:\"a\";i:190;s:1:\"b\";s:17:\"force-delete User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:190;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:17:\"force-delete User\";s:1:\"c\";s:3:\"api\";}i:191;a:4:{s:1:\"a\";i:192;s:1:\"b\";s:21:\"force-delete-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:192;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:21:\"force-delete-any User\";s:1:\"c\";s:3:\"api\";}i:193;a:4:{s:1:\"a\";i:194;s:1:\"b\";s:15:\"view Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:194;a:4:{s:1:\"a\";i:195;s:1:\"b\";s:19:\"view-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:195;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:19:\"view-any Permission\";s:1:\"c\";s:3:\"api\";}i:196;a:4:{s:1:\"a\";i:197;s:1:\"b\";s:17:\"create Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:197;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:17:\"create Permission\";s:1:\"c\";s:3:\"api\";}i:198;a:4:{s:1:\"a\";i:199;s:1:\"b\";s:17:\"update Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:199;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:17:\"update Permission\";s:1:\"c\";s:3:\"api\";}i:200;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:17:\"delete Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:201;a:3:{s:1:\"a\";i:202;s:1:\"b\";s:17:\"delete Permission\";s:1:\"c\";s:3:\"api\";}i:202;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:21:\"delete-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:203;a:3:{s:1:\"a\";i:204;s:1:\"b\";s:21:\"delete-any Permission\";s:1:\"c\";s:3:\"api\";}i:204;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:23:\"force-delete Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:205;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:27:\"force-delete-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:206;a:3:{s:1:\"a\";i:208;s:1:\"b\";s:23:\"force-delete Permission\";s:1:\"c\";s:3:\"api\";}i:207;a:3:{s:1:\"a\";i:209;s:1:\"b\";s:27:\"force-delete-any Permission\";s:1:\"c\";s:3:\"api\";}i:208;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:18:\"reorder Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:209;a:3:{s:1:\"a\";i:211;s:1:\"b\";s:18:\"reorder Permission\";s:1:\"c\";s:3:\"api\";}i:210;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:20:\"replicate Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:211;a:3:{s:1:\"a\";i:213;s:1:\"b\";s:20:\"replicate Permission\";s:1:\"c\";s:3:\"api\";}i:212;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:9:\"view Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:213;a:3:{s:1:\"a\";i:215;s:1:\"b\";s:9:\"view Role\";s:1:\"c\";s:3:\"api\";}i:214;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:13:\"view-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:215;a:3:{s:1:\"a\";i:217;s:1:\"b\";s:13:\"view-any Role\";s:1:\"c\";s:3:\"api\";}i:216;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:11:\"create Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:217;a:3:{s:1:\"a\";i:219;s:1:\"b\";s:11:\"create Role\";s:1:\"c\";s:3:\"api\";}i:218;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:11:\"update Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:219;a:3:{s:1:\"a\";i:221;s:1:\"b\";s:11:\"update Role\";s:1:\"c\";s:3:\"api\";}i:220;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:11:\"delete Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:221;a:3:{s:1:\"a\";i:223;s:1:\"b\";s:11:\"delete Role\";s:1:\"c\";s:3:\"api\";}i:222;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:15:\"delete-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:223;a:3:{s:1:\"a\";i:225;s:1:\"b\";s:15:\"delete-any Role\";s:1:\"c\";s:3:\"api\";}i:224;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:14:\"replicate Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:225;a:3:{s:1:\"a\";i:227;s:1:\"b\";s:14:\"replicate Role\";s:1:\"c\";s:3:\"api\";}i:226;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:12:\"restore Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:227;a:3:{s:1:\"a\";i:229;s:1:\"b\";s:12:\"restore Role\";s:1:\"c\";s:3:\"api\";}i:228;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:16:\"restore-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:229;a:3:{s:1:\"a\";i:231;s:1:\"b\";s:16:\"restore-any Role\";s:1:\"c\";s:3:\"api\";}i:230;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"reorder Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:231;a:3:{s:1:\"a\";i:233;s:1:\"b\";s:12:\"reorder Role\";s:1:\"c\";s:3:\"api\";}i:232;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:17:\"force-delete Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:233;a:3:{s:1:\"a\";i:235;s:1:\"b\";s:17:\"force-delete Role\";s:1:\"c\";s:3:\"api\";}i:234;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:21:\"force-delete-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:235;a:3:{s:1:\"a\";i:237;s:1:\"b\";s:21:\"force-delete-any Role\";s:1:\"c\";s:3:\"api\";}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:5:\"admin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"dosen\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:5:\"Staff\";s:1:\"c\";s:3:\"web\";}}}', 1750426221);
+('sistem_informasi_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3', 'i:1;', 1753360999),
+('sistem_informasi_cache_livewire-rate-limiter:a17961fa74e9275d529f489537f179c05d50c2f3:timer', 'i:1753360999;', 1753360999),
+('sistem_informasi_cache_spatie.permission.cache', 'a:3:{s:5:\"alias\";a:4:{s:1:\"a\";s:2:\"id\";s:1:\"b\";s:4:\"name\";s:1:\"c\";s:10:\"guard_name\";s:1:\"r\";s:5:\"roles\";}s:11:\"permissions\";a:236:{i:0;a:4:{s:1:\"a\";i:1;s:1:\"b\";s:9:\"Add Pages\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:2;}}i:1;a:4:{s:1:\"a\";i:2;s:1:\"b\";s:16:\"view-any Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:16:\"view-any Content\";s:1:\"c\";s:3:\"api\";}i:3;a:4:{s:1:\"a\";i:4;s:1:\"b\";s:12:\"view Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:4;a:3:{s:1:\"a\";i:5;s:1:\"b\";s:12:\"view Content\";s:1:\"c\";s:3:\"api\";}i:5;a:4:{s:1:\"a\";i:6;s:1:\"b\";s:14:\"create Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:6;a:3:{s:1:\"a\";i:7;s:1:\"b\";s:14:\"create Content\";s:1:\"c\";s:3:\"api\";}i:7;a:4:{s:1:\"a\";i:8;s:1:\"b\";s:14:\"update Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:8;a:3:{s:1:\"a\";i:9;s:1:\"b\";s:14:\"update Content\";s:1:\"c\";s:3:\"api\";}i:9;a:4:{s:1:\"a\";i:10;s:1:\"b\";s:14:\"delete Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:10;a:3:{s:1:\"a\";i:11;s:1:\"b\";s:14:\"delete Content\";s:1:\"c\";s:3:\"api\";}i:11;a:4:{s:1:\"a\";i:12;s:1:\"b\";s:18:\"delete-any Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:12;a:3:{s:1:\"a\";i:13;s:1:\"b\";s:18:\"delete-any Content\";s:1:\"c\";s:3:\"api\";}i:13;a:3:{s:1:\"a\";i:14;s:1:\"b\";s:17:\"replicate Content\";s:1:\"c\";s:3:\"web\";}i:14;a:3:{s:1:\"a\";i:15;s:1:\"b\";s:17:\"replicate Content\";s:1:\"c\";s:3:\"api\";}i:15;a:3:{s:1:\"a\";i:16;s:1:\"b\";s:15:\"restore Content\";s:1:\"c\";s:3:\"web\";}i:16;a:3:{s:1:\"a\";i:17;s:1:\"b\";s:15:\"restore Content\";s:1:\"c\";s:3:\"api\";}i:17;a:3:{s:1:\"a\";i:18;s:1:\"b\";s:19:\"restore-any Content\";s:1:\"c\";s:3:\"web\";}i:18;a:3:{s:1:\"a\";i:19;s:1:\"b\";s:19:\"restore-any Content\";s:1:\"c\";s:3:\"api\";}i:19;a:4:{s:1:\"a\";i:20;s:1:\"b\";s:15:\"reorder Content\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:20;a:3:{s:1:\"a\";i:21;s:1:\"b\";s:15:\"reorder Content\";s:1:\"c\";s:3:\"api\";}i:21;a:3:{s:1:\"a\";i:22;s:1:\"b\";s:20:\"force-delete Content\";s:1:\"c\";s:3:\"web\";}i:22;a:3:{s:1:\"a\";i:23;s:1:\"b\";s:20:\"force-delete Content\";s:1:\"c\";s:3:\"api\";}i:23;a:3:{s:1:\"a\";i:24;s:1:\"b\";s:24:\"force-delete-any Content\";s:1:\"c\";s:3:\"web\";}i:24;a:3:{s:1:\"a\";i:25;s:1:\"b\";s:24:\"force-delete-any Content\";s:1:\"c\";s:3:\"api\";}i:25;a:4:{s:1:\"a\";i:26;s:1:\"b\";s:14:\"view-any Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:26;a:3:{s:1:\"a\";i:27;s:1:\"b\";s:14:\"view-any Dosen\";s:1:\"c\";s:3:\"api\";}i:27;a:4:{s:1:\"a\";i:28;s:1:\"b\";s:10:\"view Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:28;a:3:{s:1:\"a\";i:29;s:1:\"b\";s:10:\"view Dosen\";s:1:\"c\";s:3:\"api\";}i:29;a:4:{s:1:\"a\";i:30;s:1:\"b\";s:12:\"create Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:30;a:3:{s:1:\"a\";i:31;s:1:\"b\";s:12:\"create Dosen\";s:1:\"c\";s:3:\"api\";}i:31;a:4:{s:1:\"a\";i:32;s:1:\"b\";s:12:\"update Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:32;a:3:{s:1:\"a\";i:33;s:1:\"b\";s:12:\"update Dosen\";s:1:\"c\";s:3:\"api\";}i:33;a:4:{s:1:\"a\";i:34;s:1:\"b\";s:12:\"delete Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:34;a:3:{s:1:\"a\";i:35;s:1:\"b\";s:12:\"delete Dosen\";s:1:\"c\";s:3:\"api\";}i:35;a:3:{s:1:\"a\";i:36;s:1:\"b\";s:16:\"delete-any Dosen\";s:1:\"c\";s:3:\"web\";}i:36;a:3:{s:1:\"a\";i:37;s:1:\"b\";s:16:\"delete-any Dosen\";s:1:\"c\";s:3:\"api\";}i:37;a:3:{s:1:\"a\";i:38;s:1:\"b\";s:15:\"replicate Dosen\";s:1:\"c\";s:3:\"web\";}i:38;a:3:{s:1:\"a\";i:39;s:1:\"b\";s:15:\"replicate Dosen\";s:1:\"c\";s:3:\"api\";}i:39;a:4:{s:1:\"a\";i:40;s:1:\"b\";s:13:\"restore Dosen\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:40;a:3:{s:1:\"a\";i:41;s:1:\"b\";s:13:\"restore Dosen\";s:1:\"c\";s:3:\"api\";}i:41;a:3:{s:1:\"a\";i:42;s:1:\"b\";s:17:\"restore-any Dosen\";s:1:\"c\";s:3:\"web\";}i:42;a:3:{s:1:\"a\";i:43;s:1:\"b\";s:17:\"restore-any Dosen\";s:1:\"c\";s:3:\"api\";}i:43;a:3:{s:1:\"a\";i:44;s:1:\"b\";s:13:\"reorder Dosen\";s:1:\"c\";s:3:\"web\";}i:44;a:3:{s:1:\"a\";i:45;s:1:\"b\";s:13:\"reorder Dosen\";s:1:\"c\";s:3:\"api\";}i:45;a:3:{s:1:\"a\";i:46;s:1:\"b\";s:18:\"force-delete Dosen\";s:1:\"c\";s:3:\"web\";}i:46;a:3:{s:1:\"a\";i:47;s:1:\"b\";s:18:\"force-delete Dosen\";s:1:\"c\";s:3:\"api\";}i:47;a:3:{s:1:\"a\";i:48;s:1:\"b\";s:22:\"force-delete-any Dosen\";s:1:\"c\";s:3:\"web\";}i:48;a:3:{s:1:\"a\";i:49;s:1:\"b\";s:22:\"force-delete-any Dosen\";s:1:\"c\";s:3:\"api\";}i:49;a:4:{s:1:\"a\";i:50;s:1:\"b\";s:25:\"view-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:50;a:3:{s:1:\"a\";i:51;s:1:\"b\";s:25:\"view-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:51;a:4:{s:1:\"a\";i:52;s:1:\"b\";s:21:\"view KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:52;a:3:{s:1:\"a\";i:53;s:1:\"b\";s:21:\"view KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:53;a:4:{s:1:\"a\";i:54;s:1:\"b\";s:23:\"create KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:54;a:3:{s:1:\"a\";i:55;s:1:\"b\";s:23:\"create KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:55;a:4:{s:1:\"a\";i:56;s:1:\"b\";s:23:\"update KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:56;a:3:{s:1:\"a\";i:57;s:1:\"b\";s:23:\"update KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:57;a:4:{s:1:\"a\";i:58;s:1:\"b\";s:23:\"delete KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:58;a:3:{s:1:\"a\";i:59;s:1:\"b\";s:23:\"delete KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:59;a:4:{s:1:\"a\";i:60;s:1:\"b\";s:27:\"delete-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:60;a:3:{s:1:\"a\";i:61;s:1:\"b\";s:27:\"delete-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:61;a:3:{s:1:\"a\";i:62;s:1:\"b\";s:26:\"replicate KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:62;a:3:{s:1:\"a\";i:63;s:1:\"b\";s:26:\"replicate KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:63;a:3:{s:1:\"a\";i:64;s:1:\"b\";s:24:\"restore KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:64;a:3:{s:1:\"a\";i:65;s:1:\"b\";s:24:\"restore KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:65;a:4:{s:1:\"a\";i:66;s:1:\"b\";s:28:\"restore-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:66;a:3:{s:1:\"a\";i:67;s:1:\"b\";s:28:\"restore-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:67;a:4:{s:1:\"a\";i:68;s:1:\"b\";s:24:\"reorder KalenderAkademik\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:68;a:3:{s:1:\"a\";i:69;s:1:\"b\";s:24:\"reorder KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:69;a:3:{s:1:\"a\";i:70;s:1:\"b\";s:29:\"force-delete KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:70;a:3:{s:1:\"a\";i:71;s:1:\"b\";s:29:\"force-delete KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:71;a:3:{s:1:\"a\";i:72;s:1:\"b\";s:33:\"force-delete-any KalenderAkademik\";s:1:\"c\";s:3:\"web\";}i:72;a:3:{s:1:\"a\";i:73;s:1:\"b\";s:33:\"force-delete-any KalenderAkademik\";s:1:\"c\";s:3:\"api\";}i:73;a:4:{s:1:\"a\";i:74;s:1:\"b\";s:13:\"view-any Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:74;a:3:{s:1:\"a\";i:75;s:1:\"b\";s:13:\"view-any Page\";s:1:\"c\";s:3:\"api\";}i:75;a:4:{s:1:\"a\";i:76;s:1:\"b\";s:9:\"view Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:76;a:3:{s:1:\"a\";i:77;s:1:\"b\";s:9:\"view Page\";s:1:\"c\";s:3:\"api\";}i:77;a:4:{s:1:\"a\";i:78;s:1:\"b\";s:11:\"create Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:78;a:3:{s:1:\"a\";i:79;s:1:\"b\";s:11:\"create Page\";s:1:\"c\";s:3:\"api\";}i:79;a:4:{s:1:\"a\";i:80;s:1:\"b\";s:11:\"update Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:80;a:3:{s:1:\"a\";i:81;s:1:\"b\";s:11:\"update Page\";s:1:\"c\";s:3:\"api\";}i:81;a:4:{s:1:\"a\";i:82;s:1:\"b\";s:11:\"delete Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:82;a:3:{s:1:\"a\";i:83;s:1:\"b\";s:11:\"delete Page\";s:1:\"c\";s:3:\"api\";}i:83;a:3:{s:1:\"a\";i:84;s:1:\"b\";s:15:\"delete-any Page\";s:1:\"c\";s:3:\"web\";}i:84;a:3:{s:1:\"a\";i:85;s:1:\"b\";s:15:\"delete-any Page\";s:1:\"c\";s:3:\"api\";}i:85;a:3:{s:1:\"a\";i:86;s:1:\"b\";s:14:\"replicate Page\";s:1:\"c\";s:3:\"web\";}i:86;a:3:{s:1:\"a\";i:87;s:1:\"b\";s:14:\"replicate Page\";s:1:\"c\";s:3:\"api\";}i:87;a:3:{s:1:\"a\";i:88;s:1:\"b\";s:12:\"restore Page\";s:1:\"c\";s:3:\"web\";}i:88;a:3:{s:1:\"a\";i:89;s:1:\"b\";s:12:\"restore Page\";s:1:\"c\";s:3:\"api\";}i:89;a:3:{s:1:\"a\";i:90;s:1:\"b\";s:16:\"restore-any Page\";s:1:\"c\";s:3:\"web\";}i:90;a:3:{s:1:\"a\";i:91;s:1:\"b\";s:16:\"restore-any Page\";s:1:\"c\";s:3:\"api\";}i:91;a:4:{s:1:\"a\";i:92;s:1:\"b\";s:12:\"reorder Page\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:3;}}i:92;a:3:{s:1:\"a\";i:93;s:1:\"b\";s:12:\"reorder Page\";s:1:\"c\";s:3:\"api\";}i:93;a:3:{s:1:\"a\";i:94;s:1:\"b\";s:17:\"force-delete Page\";s:1:\"c\";s:3:\"web\";}i:94;a:3:{s:1:\"a\";i:95;s:1:\"b\";s:17:\"force-delete Page\";s:1:\"c\";s:3:\"api\";}i:95;a:3:{s:1:\"a\";i:96;s:1:\"b\";s:21:\"force-delete-any Page\";s:1:\"c\";s:3:\"web\";}i:96;a:3:{s:1:\"a\";i:97;s:1:\"b\";s:21:\"force-delete-any Page\";s:1:\"c\";s:3:\"api\";}i:97;a:4:{s:1:\"a\";i:98;s:1:\"b\";s:13:\"view-any Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:98;a:3:{s:1:\"a\";i:99;s:1:\"b\";s:13:\"view-any Post\";s:1:\"c\";s:3:\"api\";}i:99;a:4:{s:1:\"a\";i:100;s:1:\"b\";s:9:\"view Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:100;a:3:{s:1:\"a\";i:101;s:1:\"b\";s:9:\"view Post\";s:1:\"c\";s:3:\"api\";}i:101;a:4:{s:1:\"a\";i:102;s:1:\"b\";s:11:\"create Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:102;a:3:{s:1:\"a\";i:103;s:1:\"b\";s:11:\"create Post\";s:1:\"c\";s:3:\"api\";}i:103;a:4:{s:1:\"a\";i:104;s:1:\"b\";s:11:\"update Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:104;a:3:{s:1:\"a\";i:105;s:1:\"b\";s:11:\"update Post\";s:1:\"c\";s:3:\"api\";}i:105;a:4:{s:1:\"a\";i:106;s:1:\"b\";s:11:\"delete Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:106;a:3:{s:1:\"a\";i:107;s:1:\"b\";s:11:\"delete Post\";s:1:\"c\";s:3:\"api\";}i:107;a:4:{s:1:\"a\";i:108;s:1:\"b\";s:15:\"delete-any Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:108;a:3:{s:1:\"a\";i:109;s:1:\"b\";s:15:\"delete-any Post\";s:1:\"c\";s:3:\"api\";}i:109;a:3:{s:1:\"a\";i:110;s:1:\"b\";s:14:\"replicate Post\";s:1:\"c\";s:3:\"web\";}i:110;a:3:{s:1:\"a\";i:111;s:1:\"b\";s:14:\"replicate Post\";s:1:\"c\";s:3:\"api\";}i:111;a:3:{s:1:\"a\";i:112;s:1:\"b\";s:12:\"restore Post\";s:1:\"c\";s:3:\"web\";}i:112;a:3:{s:1:\"a\";i:113;s:1:\"b\";s:12:\"restore Post\";s:1:\"c\";s:3:\"api\";}i:113;a:3:{s:1:\"a\";i:114;s:1:\"b\";s:16:\"restore-any Post\";s:1:\"c\";s:3:\"web\";}i:114;a:3:{s:1:\"a\";i:115;s:1:\"b\";s:16:\"restore-any Post\";s:1:\"c\";s:3:\"api\";}i:115;a:3:{s:1:\"a\";i:116;s:1:\"b\";s:12:\"reorder Post\";s:1:\"c\";s:3:\"web\";}i:116;a:3:{s:1:\"a\";i:117;s:1:\"b\";s:12:\"reorder Post\";s:1:\"c\";s:3:\"api\";}i:117;a:4:{s:1:\"a\";i:118;s:1:\"b\";s:17:\"force-delete Post\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:118;a:3:{s:1:\"a\";i:119;s:1:\"b\";s:17:\"force-delete Post\";s:1:\"c\";s:3:\"api\";}i:119;a:3:{s:1:\"a\";i:120;s:1:\"b\";s:21:\"force-delete-any Post\";s:1:\"c\";s:3:\"web\";}i:120;a:3:{s:1:\"a\";i:121;s:1:\"b\";s:21:\"force-delete-any Post\";s:1:\"c\";s:3:\"api\";}i:121;a:4:{s:1:\"a\";i:122;s:1:\"b\";s:21:\"view-any PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:122;a:3:{s:1:\"a\";i:123;s:1:\"b\";s:21:\"view-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:123;a:4:{s:1:\"a\";i:124;s:1:\"b\";s:17:\"view PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:124;a:3:{s:1:\"a\";i:125;s:1:\"b\";s:17:\"view PostCategory\";s:1:\"c\";s:3:\"api\";}i:125;a:4:{s:1:\"a\";i:126;s:1:\"b\";s:19:\"create PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:126;a:3:{s:1:\"a\";i:127;s:1:\"b\";s:19:\"create PostCategory\";s:1:\"c\";s:3:\"api\";}i:127;a:3:{s:1:\"a\";i:128;s:1:\"b\";s:19:\"update PostCategory\";s:1:\"c\";s:3:\"web\";}i:128;a:3:{s:1:\"a\";i:129;s:1:\"b\";s:19:\"update PostCategory\";s:1:\"c\";s:3:\"api\";}i:129;a:4:{s:1:\"a\";i:130;s:1:\"b\";s:19:\"delete PostCategory\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:130;a:3:{s:1:\"a\";i:131;s:1:\"b\";s:19:\"delete PostCategory\";s:1:\"c\";s:3:\"api\";}i:131;a:3:{s:1:\"a\";i:132;s:1:\"b\";s:23:\"delete-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:132;a:3:{s:1:\"a\";i:133;s:1:\"b\";s:23:\"delete-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:133;a:3:{s:1:\"a\";i:134;s:1:\"b\";s:22:\"replicate PostCategory\";s:1:\"c\";s:3:\"web\";}i:134;a:3:{s:1:\"a\";i:135;s:1:\"b\";s:22:\"replicate PostCategory\";s:1:\"c\";s:3:\"api\";}i:135;a:3:{s:1:\"a\";i:136;s:1:\"b\";s:20:\"restore PostCategory\";s:1:\"c\";s:3:\"web\";}i:136;a:3:{s:1:\"a\";i:137;s:1:\"b\";s:20:\"restore PostCategory\";s:1:\"c\";s:3:\"api\";}i:137;a:3:{s:1:\"a\";i:138;s:1:\"b\";s:24:\"restore-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:138;a:3:{s:1:\"a\";i:139;s:1:\"b\";s:24:\"restore-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:139;a:3:{s:1:\"a\";i:140;s:1:\"b\";s:20:\"reorder PostCategory\";s:1:\"c\";s:3:\"web\";}i:140;a:3:{s:1:\"a\";i:141;s:1:\"b\";s:20:\"reorder PostCategory\";s:1:\"c\";s:3:\"api\";}i:141;a:3:{s:1:\"a\";i:142;s:1:\"b\";s:25:\"force-delete PostCategory\";s:1:\"c\";s:3:\"web\";}i:142;a:3:{s:1:\"a\";i:143;s:1:\"b\";s:25:\"force-delete PostCategory\";s:1:\"c\";s:3:\"api\";}i:143;a:3:{s:1:\"a\";i:144;s:1:\"b\";s:29:\"force-delete-any PostCategory\";s:1:\"c\";s:3:\"web\";}i:144;a:3:{s:1:\"a\";i:145;s:1:\"b\";s:29:\"force-delete-any PostCategory\";s:1:\"c\";s:3:\"api\";}i:145;a:4:{s:1:\"a\";i:146;s:1:\"b\";s:20:\"view-any TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:146;a:3:{s:1:\"a\";i:147;s:1:\"b\";s:20:\"view-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:147;a:4:{s:1:\"a\";i:148;s:1:\"b\";s:16:\"view TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:148;a:3:{s:1:\"a\";i:149;s:1:\"b\";s:16:\"view TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:149;a:4:{s:1:\"a\";i:150;s:1:\"b\";s:18:\"create TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:150;a:3:{s:1:\"a\";i:151;s:1:\"b\";s:18:\"create TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:151;a:3:{s:1:\"a\";i:152;s:1:\"b\";s:18:\"update TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:152;a:3:{s:1:\"a\";i:153;s:1:\"b\";s:18:\"update TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:153;a:4:{s:1:\"a\";i:154;s:1:\"b\";s:18:\"delete TahunAjaran\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:2:{i:0;i:1;i:1;i:3;}}i:154;a:3:{s:1:\"a\";i:155;s:1:\"b\";s:18:\"delete TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:155;a:3:{s:1:\"a\";i:156;s:1:\"b\";s:22:\"delete-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:156;a:3:{s:1:\"a\";i:157;s:1:\"b\";s:22:\"delete-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:157;a:3:{s:1:\"a\";i:158;s:1:\"b\";s:21:\"replicate TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:158;a:3:{s:1:\"a\";i:159;s:1:\"b\";s:21:\"replicate TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:159;a:3:{s:1:\"a\";i:160;s:1:\"b\";s:19:\"restore TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:160;a:3:{s:1:\"a\";i:161;s:1:\"b\";s:19:\"restore TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:161;a:3:{s:1:\"a\";i:162;s:1:\"b\";s:23:\"restore-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:162;a:3:{s:1:\"a\";i:163;s:1:\"b\";s:23:\"restore-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:163;a:3:{s:1:\"a\";i:164;s:1:\"b\";s:19:\"reorder TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:164;a:3:{s:1:\"a\";i:165;s:1:\"b\";s:19:\"reorder TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:165;a:3:{s:1:\"a\";i:166;s:1:\"b\";s:24:\"force-delete TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:166;a:3:{s:1:\"a\";i:167;s:1:\"b\";s:24:\"force-delete TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:167;a:3:{s:1:\"a\";i:168;s:1:\"b\";s:28:\"force-delete-any TahunAjaran\";s:1:\"c\";s:3:\"web\";}i:168;a:3:{s:1:\"a\";i:169;s:1:\"b\";s:28:\"force-delete-any TahunAjaran\";s:1:\"c\";s:3:\"api\";}i:169;a:4:{s:1:\"a\";i:170;s:1:\"b\";s:13:\"view-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:170;a:3:{s:1:\"a\";i:171;s:1:\"b\";s:13:\"view-any User\";s:1:\"c\";s:3:\"api\";}i:171;a:4:{s:1:\"a\";i:172;s:1:\"b\";s:9:\"view User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:172;a:3:{s:1:\"a\";i:173;s:1:\"b\";s:9:\"view User\";s:1:\"c\";s:3:\"api\";}i:173;a:4:{s:1:\"a\";i:174;s:1:\"b\";s:11:\"create User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:174;a:4:{s:1:\"a\";i:175;s:1:\"b\";s:11:\"create User\";s:1:\"c\";s:3:\"api\";s:1:\"r\";a:1:{i:0;i:1;}}i:175;a:4:{s:1:\"a\";i:176;s:1:\"b\";s:11:\"update User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:176;a:3:{s:1:\"a\";i:177;s:1:\"b\";s:11:\"update User\";s:1:\"c\";s:3:\"api\";}i:177;a:4:{s:1:\"a\";i:178;s:1:\"b\";s:11:\"delete User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:178;a:3:{s:1:\"a\";i:179;s:1:\"b\";s:11:\"delete User\";s:1:\"c\";s:3:\"api\";}i:179;a:4:{s:1:\"a\";i:180;s:1:\"b\";s:15:\"delete-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:180;a:3:{s:1:\"a\";i:181;s:1:\"b\";s:15:\"delete-any User\";s:1:\"c\";s:3:\"api\";}i:181;a:3:{s:1:\"a\";i:182;s:1:\"b\";s:14:\"replicate User\";s:1:\"c\";s:3:\"web\";}i:182;a:3:{s:1:\"a\";i:183;s:1:\"b\";s:14:\"replicate User\";s:1:\"c\";s:3:\"api\";}i:183;a:3:{s:1:\"a\";i:184;s:1:\"b\";s:12:\"restore User\";s:1:\"c\";s:3:\"web\";}i:184;a:3:{s:1:\"a\";i:185;s:1:\"b\";s:12:\"restore User\";s:1:\"c\";s:3:\"api\";}i:185;a:3:{s:1:\"a\";i:186;s:1:\"b\";s:16:\"restore-any User\";s:1:\"c\";s:3:\"web\";}i:186;a:3:{s:1:\"a\";i:187;s:1:\"b\";s:16:\"restore-any User\";s:1:\"c\";s:3:\"api\";}i:187;a:3:{s:1:\"a\";i:188;s:1:\"b\";s:12:\"reorder User\";s:1:\"c\";s:3:\"web\";}i:188;a:3:{s:1:\"a\";i:189;s:1:\"b\";s:12:\"reorder User\";s:1:\"c\";s:3:\"api\";}i:189;a:4:{s:1:\"a\";i:190;s:1:\"b\";s:17:\"force-delete User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:190;a:3:{s:1:\"a\";i:191;s:1:\"b\";s:17:\"force-delete User\";s:1:\"c\";s:3:\"api\";}i:191;a:4:{s:1:\"a\";i:192;s:1:\"b\";s:21:\"force-delete-any User\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:192;a:3:{s:1:\"a\";i:193;s:1:\"b\";s:21:\"force-delete-any User\";s:1:\"c\";s:3:\"api\";}i:193;a:4:{s:1:\"a\";i:194;s:1:\"b\";s:15:\"view Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:194;a:4:{s:1:\"a\";i:195;s:1:\"b\";s:19:\"view-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:195;a:3:{s:1:\"a\";i:196;s:1:\"b\";s:19:\"view-any Permission\";s:1:\"c\";s:3:\"api\";}i:196;a:4:{s:1:\"a\";i:197;s:1:\"b\";s:17:\"create Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:197;a:3:{s:1:\"a\";i:198;s:1:\"b\";s:17:\"create Permission\";s:1:\"c\";s:3:\"api\";}i:198;a:4:{s:1:\"a\";i:199;s:1:\"b\";s:17:\"update Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:199;a:3:{s:1:\"a\";i:200;s:1:\"b\";s:17:\"update Permission\";s:1:\"c\";s:3:\"api\";}i:200;a:4:{s:1:\"a\";i:201;s:1:\"b\";s:17:\"delete Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:201;a:3:{s:1:\"a\";i:202;s:1:\"b\";s:17:\"delete Permission\";s:1:\"c\";s:3:\"api\";}i:202;a:4:{s:1:\"a\";i:203;s:1:\"b\";s:21:\"delete-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:203;a:3:{s:1:\"a\";i:204;s:1:\"b\";s:21:\"delete-any Permission\";s:1:\"c\";s:3:\"api\";}i:204;a:4:{s:1:\"a\";i:205;s:1:\"b\";s:23:\"force-delete Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:205;a:4:{s:1:\"a\";i:206;s:1:\"b\";s:27:\"force-delete-any Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:206;a:3:{s:1:\"a\";i:208;s:1:\"b\";s:23:\"force-delete Permission\";s:1:\"c\";s:3:\"api\";}i:207;a:3:{s:1:\"a\";i:209;s:1:\"b\";s:27:\"force-delete-any Permission\";s:1:\"c\";s:3:\"api\";}i:208;a:4:{s:1:\"a\";i:210;s:1:\"b\";s:18:\"reorder Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:209;a:3:{s:1:\"a\";i:211;s:1:\"b\";s:18:\"reorder Permission\";s:1:\"c\";s:3:\"api\";}i:210;a:4:{s:1:\"a\";i:212;s:1:\"b\";s:20:\"replicate Permission\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:211;a:3:{s:1:\"a\";i:213;s:1:\"b\";s:20:\"replicate Permission\";s:1:\"c\";s:3:\"api\";}i:212;a:4:{s:1:\"a\";i:214;s:1:\"b\";s:9:\"view Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:213;a:3:{s:1:\"a\";i:215;s:1:\"b\";s:9:\"view Role\";s:1:\"c\";s:3:\"api\";}i:214;a:4:{s:1:\"a\";i:216;s:1:\"b\";s:13:\"view-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:215;a:3:{s:1:\"a\";i:217;s:1:\"b\";s:13:\"view-any Role\";s:1:\"c\";s:3:\"api\";}i:216;a:4:{s:1:\"a\";i:218;s:1:\"b\";s:11:\"create Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:217;a:3:{s:1:\"a\";i:219;s:1:\"b\";s:11:\"create Role\";s:1:\"c\";s:3:\"api\";}i:218;a:4:{s:1:\"a\";i:220;s:1:\"b\";s:11:\"update Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:219;a:3:{s:1:\"a\";i:221;s:1:\"b\";s:11:\"update Role\";s:1:\"c\";s:3:\"api\";}i:220;a:4:{s:1:\"a\";i:222;s:1:\"b\";s:11:\"delete Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:221;a:3:{s:1:\"a\";i:223;s:1:\"b\";s:11:\"delete Role\";s:1:\"c\";s:3:\"api\";}i:222;a:4:{s:1:\"a\";i:224;s:1:\"b\";s:15:\"delete-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:223;a:3:{s:1:\"a\";i:225;s:1:\"b\";s:15:\"delete-any Role\";s:1:\"c\";s:3:\"api\";}i:224;a:4:{s:1:\"a\";i:226;s:1:\"b\";s:14:\"replicate Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:225;a:3:{s:1:\"a\";i:227;s:1:\"b\";s:14:\"replicate Role\";s:1:\"c\";s:3:\"api\";}i:226;a:4:{s:1:\"a\";i:228;s:1:\"b\";s:12:\"restore Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:227;a:3:{s:1:\"a\";i:229;s:1:\"b\";s:12:\"restore Role\";s:1:\"c\";s:3:\"api\";}i:228;a:4:{s:1:\"a\";i:230;s:1:\"b\";s:16:\"restore-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:229;a:3:{s:1:\"a\";i:231;s:1:\"b\";s:16:\"restore-any Role\";s:1:\"c\";s:3:\"api\";}i:230;a:4:{s:1:\"a\";i:232;s:1:\"b\";s:12:\"reorder Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:231;a:3:{s:1:\"a\";i:233;s:1:\"b\";s:12:\"reorder Role\";s:1:\"c\";s:3:\"api\";}i:232;a:4:{s:1:\"a\";i:234;s:1:\"b\";s:17:\"force-delete Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:233;a:3:{s:1:\"a\";i:235;s:1:\"b\";s:17:\"force-delete Role\";s:1:\"c\";s:3:\"api\";}i:234;a:4:{s:1:\"a\";i:236;s:1:\"b\";s:21:\"force-delete-any Role\";s:1:\"c\";s:3:\"web\";s:1:\"r\";a:1:{i:0;i:1;}}i:235;a:3:{s:1:\"a\";i:237;s:1:\"b\";s:21:\"force-delete-any Role\";s:1:\"c\";s:3:\"api\";}}s:5:\"roles\";a:3:{i:0;a:3:{s:1:\"a\";i:1;s:1:\"b\";s:5:\"admin\";s:1:\"c\";s:3:\"web\";}i:1;a:3:{s:1:\"a\";i:2;s:1:\"b\";s:5:\"dosen\";s:1:\"c\";s:3:\"web\";}i:2;a:3:{s:1:\"a\";i:3;s:1:\"b\";s:5:\"Staff\";s:1:\"c\";s:3:\"web\";}}}', 1753428695);
 
 -- --------------------------------------------------------
 
@@ -49,8 +49,8 @@ INSERT INTO `cache` (`key`, `value`, `expiration`) VALUES
 --
 
 CREATE TABLE `cache_locks` (
-  `key` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `owner` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `key` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `owner` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `expiration` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -62,9 +62,9 @@ CREATE TABLE `cache_locks` (
 
 CREATE TABLE `comments` (
   `id` bigint UNSIGNED NOT NULL,
-  `author_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `content` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `author_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -85,7 +85,7 @@ INSERT INTO `comments` (`id`, `author_name`, `email`, `content`, `created_at`, `
 CREATE TABLE `contents` (
   `id` bigint UNSIGNED NOT NULL,
   `page_id` bigint UNSIGNED NOT NULL,
-  `sub_title` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `sub_title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `contents` json DEFAULT NULL,
   `is_active` tinyint(1) NOT NULL DEFAULT '1',
   `published_at` datetime NOT NULL,
@@ -99,11 +99,11 @@ CREATE TABLE `contents` (
 --
 
 INSERT INTO `contents` (`id`, `page_id`, `sub_title`, `contents`, `is_active`, `published_at`, `created_at`, `updated_at`, `views_count`) VALUES
-(1, 1, 'Misi', '[{\"data\": {\"columns\": [{\"blocks\": [{\"data\": {\"text\": \"Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses perancangan dan pengembangan Sistem Informasi dan Teknologi Informasi\"}, \"type\": \"text\"}]}, {\"blocks\": [{\"data\": {\"text\": \"Menyelenggarakan pendidikan yang berkualitas untuk menghasilkan lulusan Program Studi Sistem Informasi yang mampu bekerjasama dalam tim, komunikator yang efektif serta memiliki keinginan pembelajaran sepanjang hidup yang berlandaskan etika dan moral.\"}, \"type\": \"text\"}]}, {\"blocks\": [{\"data\": {\"text\": \"Berperan aktif dalam kegiatan penelitian dan pengabdian masyarakat di bidang keilmuan sistem informasi yang memberikan kontribusi kepada masyarakat.\"}, \"type\": \"text\"}]}, {\"blocks\": [{\"data\": {\"text\": \"Berperan aktif dalam kemitraan dalam mendukung kegiatan tridarma dan memberikan layanan akademik dan non akademik baik pada tingkat nasional maupun internasional.\"}, \"type\": \"text\"}]}], \"column_count\": \"4\"}, \"type\": \"columns\"}]', 1, '2025-05-23 12:00:37', '2025-05-23 07:58:59', '2025-06-11 02:17:05', 1),
-(2, 1, 'Visi', '[{\"data\": {\"text\": \"<p>Menjadi Program Studi Sistem Informasi unggul di Indonesia di bidang sistem informasi manufaktur dan analisis sistem pada tahun 2027</p>\"}, \"type\": \"text\"}]', 1, '2025-05-23 11:27:13', '2025-05-23 21:43:45', '2025-06-11 02:17:05', 1),
-(6, 3, 'Sejarah Program Studi', '[{\"data\": {\"text\": \"<p>&nbsp; &nbsp; Program Studi Sistem Informasi merupakan salah satu program studi yang berada dalam naungan Fakultas Teknik Universitas Darma Persada. Program Studi Sistem Informasi diselenggarakan mulai pada tahun 2003, berdasarkan Surat Keputusan Direktur Jendral Pendidikan Tinggi Nomor : <strong>1178/D/T/2003</strong>, tanggal 10 Juni 2003. Sesuai dengan perjalanan waktu pada tahun 2010 memperoleh status terakreditasi dengan peringkat akreditasi C sebagaimana dinyatakan dalam Surat Keputusan Ketua BAN-PT Nomor : <strong>025/BAN-PT/Ak-XIII/SI/XI/2010</strong> dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 12 Nopember 2010 sampai dengan 12 Nopember 2015.<br>&nbsp; &nbsp; &nbsp;Pada Tahun 2016 dilakukan re-akreditasi dengan peringkat akreditasi B sebagaimana dinyatakan dalam Surat Keputusan Ketua BAN-PT Nomor : 0332/SK/BAN-PT/Akred/S/IV/2016 dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 28 April 2016 sampai dengan 28 April 2021. Pada tahun 2021 dilakukan re-akreditasi dengan peringkat akreditasi B sebagaimana dinyatakan dalam Keputusan BAN-PT No. 2547/SK/Ak-PPJ/S/IV/2021, tanggal 28 April 2021 Tentang akreditasi program studi Sistem Informasi pada program sarjana universitas Darma Persada, kota Jakarta Timur dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 29 April 2021 sampai dengan 29 April 2026.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-26 15:45:23', '2025-05-26 01:45:42', '2025-06-11 01:56:00', 2),
-(7, 7, 'Keunggulan', '[{\"data\": {\"text\": \"<p>Program Studi Sistem Informasi bertujuan menghasilkan sarjana yang mampu : meningkatkan kinerja suatu organisasi dalam hal produktivitas, kualitas, efektivitas, dan efisiensi, menerjemakan kebutuhan manajemen ke dalam aplikasi sistem informasi, dan mengelola Departemen Sistern Informasi suatu organisasi/perusahaan.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-27 19:16:09', '2025-05-27 05:16:41', '2025-06-11 02:17:21', 1),
-(8, 1, 'Tujuan', '[{\"data\": {\"text\": \"<ol><li>Menghasilkan lulusan yang mampu berkompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses, perancangan sistem informasi dan teknologi informasi</li><li>Menghasilkan sistem pembelajaran kreatif, inovatif, berdaya saing, profesional dan tanggung jawab pada bidang Sistem Informasi.</li><li>Menjadi program studi yang berpotensi menghasilkan riset yang dapat mendukung kegiatan pengabdian kepada masyarakat di bidang sistem informasi.</li><li>Memperluas kemitraan untuk meningkatkan kuantitas dan kualitas kegiatan Tridharma Perguruan Tinggi baik akademik dan non akademik</li></ol>\"}, \"type\": \"text\"}]', 1, '2025-05-27 19:37:15', '2025-05-27 05:42:19', '2025-06-11 02:17:05', 1),
+(1, 1, 'Misi', '[{\"data\": {\"columns\": [{\"blocks\": [{\"data\": {\"desc\": \"Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses perancangan dan pengembangan Sistem Informasi dan Teknologi Informasi\", \"text\": \"Memiliki kompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses perancangan dan pengembangan Sistem Informasi dan Teknologi Informasi\", \"image\": null, \"title\": \"(1)\"}, \"type\": \"card\"}]}, {\"blocks\": [{\"data\": {\"desc\": \"Menyelenggarakan pendidikan yang berkualitas untuk menghasilkan lulusan Program Studi Sistem Informasi yang mampu bekerjasama dalam tim, komunikator yang efektif serta memiliki keinginan pembelajaran sepanjang hidup yang berlandaskan etika dan moral.\", \"text\": \"Menyelenggarakan pendidikan yang berkualitas untuk menghasilkan lulusan Program Studi Sistem Informasi yang mampu bekerjasama dalam tim, komunikator yang efektif serta memiliki keinginan pembelajaran sepanjang hidup yang berlandaskan etika dan moral.\", \"image\": null, \"title\": \"(2)\"}, \"type\": \"card\"}]}, {\"blocks\": [{\"data\": {\"desc\": \"Berperan aktif dalam kegiatan penelitian dan pengabdian masyarakat di bidang keilmuan sistem informasi yang memberikan kontribusi kepada masyarakat.\", \"text\": \"Berperan aktif dalam kegiatan penelitian dan pengabdian masyarakat di bidang keilmuan sistem informasi yang memberikan kontribusi kepada masyarakat.\", \"image\": null, \"title\": \"(3)\"}, \"type\": \"card\"}]}, {\"blocks\": [{\"data\": {\"desc\": \"Berperan aktif dalam kemitraan dalam mendukung kegiatan tridarma dan memberikan layanan akademik dan non akademik baik pada tingkat nasional maupun internasional.\", \"text\": \"Berperan aktif dalam kemitraan dalam mendukung kegiatan tridarma dan memberikan layanan akademik dan non akademik baik pada tingkat nasional maupun internasional.\", \"image\": null, \"title\": \"(4)\"}, \"type\": \"card\"}]}], \"column_count\": \"4\"}, \"type\": \"columns\"}]', 1, '2025-05-23 12:00:37', '2025-05-23 07:58:59', '2025-07-24 08:43:47', 5),
+(2, 1, 'Visi', '[{\"data\": {\"text\": \"<p>Menjadi Program Studi Sistem Informasi unggul di Indonesia di bidang sistem informasi manufaktur dan analisis sistem pada tahun 2027</p>\"}, \"type\": \"text\"}]', 1, '2025-05-23 11:27:13', '2025-05-23 21:43:45', '2025-07-24 08:43:47', 5),
+(6, 3, 'Sejarah Program Studi', '[{\"data\": {\"text\": \"<p>&nbsp; &nbsp; Program Studi Sistem Informasi merupakan salah satu program studi yang berada dalam naungan Fakultas Teknik Universitas Darma Persada. Program Studi Sistem Informasi diselenggarakan mulai pada tahun 2003, berdasarkan Surat Keputusan Direktur Jendral Pendidikan Tinggi Nomor : <strong>1178/D/T/2003</strong>, tanggal 10 Juni 2003. Sesuai dengan perjalanan waktu pada tahun 2010 memperoleh status terakreditasi dengan peringkat akreditasi C sebagaimana dinyatakan dalam Surat Keputusan Ketua BAN-PT Nomor : <strong>025/BAN-PT/Ak-XIII/SI/XI/2010</strong> dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 12 Nopember 2010 sampai dengan 12 Nopember 2015.<br>&nbsp; &nbsp; &nbsp;Pada Tahun 2016 dilakukan re-akreditasi dengan peringkat akreditasi B sebagaimana dinyatakan dalam Surat Keputusan Ketua BAN-PT Nomor : 0332/SK/BAN-PT/Akred/S/IV/2016 dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 28 April 2016 sampai dengan 28 April 2021. Pada tahun 2021 dilakukan re-akreditasi dengan peringkat akreditasi B sebagaimana dinyatakan dalam Keputusan BAN-PT No. 2547/SK/Ak-PPJ/S/IV/2021, tanggal 28 April 2021 Tentang akreditasi program studi Sistem Informasi pada program sarjana universitas Darma Persada, kota Jakarta Timur dengan sertifikat akreditasi program studi sarjana berlaku 5 (lima) tahun, sejak tanggal 29 April 2021 sampai dengan 29 April 2026.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-26 15:45:23', '2025-05-26 01:45:42', '2025-07-25 07:40:52', 11),
+(7, 7, 'Keunggulan', '[{\"data\": {\"text\": \"<p>Program Studi Sistem Informasi bertujuan menghasilkan sarjana yang mampu : meningkatkan kinerja suatu organisasi dalam hal produktivitas, kualitas, efektivitas, dan efisiensi, menerjemakan kebutuhan manajemen ke dalam aplikasi sistem informasi, dan mengelola Departemen Sistern Informasi suatu organisasi/perusahaan.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-27 19:16:09', '2025-05-27 05:16:41', '2025-07-25 07:42:05', 2),
+(8, 1, 'Tujuan', '[{\"data\": {\"text\": \"<ol><li>Menghasilkan lulusan yang mampu berkompetensi dalam bidang sistem informasi terutama pada analisa bisnis proses, perancangan sistem informasi dan teknologi informasi</li><li>Menghasilkan sistem pembelajaran kreatif, inovatif, berdaya saing, profesional dan tanggung jawab pada bidang Sistem Informasi.</li><li>Menjadi program studi yang berpotensi menghasilkan riset yang dapat mendukung kegiatan pengabdian kepada masyarakat di bidang sistem informasi.</li><li>Memperluas kemitraan untuk meningkatkan kuantitas dan kualitas kegiatan Tridharma Perguruan Tinggi baik akademik dan non akademik</li></ol>\"}, \"type\": \"text\"}]', 1, '2025-05-27 19:37:15', '2025-05-27 05:42:19', '2025-07-24 08:43:47', 5),
 (9, 16, 'Kunjungan Industry PT. Nestle Karawang Factory', '[{\"data\": {\"src\": [\"images/contents/01JWABDDE96RCB6114G40KPGWT.jpg\", \"images/contents/01JWACF9QV0EEVJCPC8DP4V6JK.png\", \"images/contents/01JWACF9R3Y2A04K76DAV2DKJT.png\"]}, \"type\": \"image\"}, {\"data\": {\"text\": \"<p>&nbsp; &nbsp; &nbsp;Pada hari Rabu, 21 November 2021, mahasiswa Program Studi Sistem Informasi melakukan kunjungan industri ke <strong>PT Nestlé Indonesia, Karawang Factory</strong>, yang terletak di kawasan industri Karawang International Industrial City (KIIC), Jawa Barat. Kegiatan ini merupakan bagian dari program pembelajaran di luar kampus (praktik lapangan) yang bertujuan untuk memperluas wawasan mahasiswa mengenai implementasi teknologi informasi dalam dunia industri, khususnya di sektor manufaktur dan pengolahan makanan dan minuman.</p><p>&nbsp; &nbsp; &nbsp;Rombongan mahasiswa disambut dengan hangat oleh tim Corporate Affairs dan tim IT PT Nestlé Karawang. Acara diawali dengan sesi presentasi mengenai profil perusahaan, sejarah Nestlé di Indonesia, serta proses produksi yang dilakukan di pabrik Karawang. Mahasiswa juga diperkenalkan pada sistem otomasi dan digitalisasi yang diterapkan dalam lini produksi, termasuk penggunaan sistem Enterprise Resource Planning (ERP), manajemen rantai pasok berbasis IT, dan kontrol mutu berbantuan teknologi.</p><p>&nbsp; &nbsp; &nbsp;Salah satu poin menarik dari kunjungan ini adalah bagaimana PT Nestlé menerapkan prinsip Industri 4.0 dalam operasionalnya, seperti integrasi Internet of Things (IoT) untuk pemantauan mesin produksi secara real-time, serta pemanfaatan data analytics dalam pengambilan keputusan. Mahasiswa juga berkesempatan untuk melakukan tur ke area produksi dengan protokol keamanan dan kebersihan yang ketat, sehingga dapat melihat langsung bagaimana sistem informasi mendukung efisiensi dan produktivitas di lapangan.</p><p>&nbsp; &nbsp; &nbsp;Kegiatan ini memberikan pengalaman berharga bagi mahasiswa dalam memahami keterkaitan antara ilmu yang dipelajari di bangku kuliah dengan penerapannya di dunia industri nyata. Selain itu, kunjungan ini juga mendorong motivasi mahasiswa untuk terus mengembangkan kemampuan di bidang teknologi informasi, khususnya yang berkaitan dengan sistem industri dan manufaktur modern.</p><p>&nbsp; &nbsp; &nbsp;Dengan berakhirnya kunjungan ini, diharapkan mahasiswa memperoleh pemahaman yang lebih konkret mengenai peran strategis sistem informasi dalam mendukung proses bisnis perusahaan berskala global seperti Nestlé, serta memperkuat kesiapan mereka untuk menghadapi dunia kerja setelah lulus nanti.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-28 09:24:57', '2025-05-27 19:26:47', '2025-06-11 02:10:24', 2),
 (10, 16, 'Kunjungan Industri PT. Omron Manufacturing Of Indonesia', '[{\"data\": {\"src\": [\"images/contents/01JWAFVBMAQW5BAWP4ZV56FN8F.png\", \"images/contents/01JWAFVBMK4MFYK5P5F7CGA0F2.png\"]}, \"type\": \"image\"}, {\"data\": {\"text\": \"<p>&nbsp; &nbsp; &nbsp;Pada hari rabu, 22 Maret 2023, mahasiswa Program Studi Sistem Informasi melaksanakan kegiatan kunjungan industri ke <strong>PT. Omron Manufacturing of Indonesia</strong> yang berlokasi di Kawasan Industri EJIP, Cikarang, Bekasi, Jawa Barat. Kegiatan ini merupakan bagian dari agenda akademik yang bertujuan untuk memberikan wawasan langsung kepada mahasiswa mengenai penerapan sistem informasi dalam proses industri manufaktur berteknologi tinggi.</p><p>&nbsp; &nbsp; &nbsp;Rombongan mahasiswa disambut oleh tim Public Relations dan perwakilan dari Divisi IT PT Omron. Kegiatan dimulai dengan sesi pemaparan profil perusahaan, sejarah dan filosofi bisnis Omron, serta cakupan produk yang diproduksi, seperti komponen otomasi industri, sensor, dan kontroler. Mahasiswa juga diberi penjelasan mengenai proses produksi di pabrik, yang telah menerapkan prinsip <em>smart manufacturing</em> berbasis teknologi informasi dan otomasi.</p><p>&nbsp; &nbsp; &nbsp;Dalam kunjungan ini, mahasiswa diajak memahami bagaimana PT Omron mengintegrasikan <strong>sistem informasi manufaktur (Manufacturing Execution System / MES)</strong>, <strong>Enterprise Resource Planning (ERP)</strong>, serta <strong>Internet of Things (IoT)</strong> untuk meningkatkan efisiensi dan akurasi dalam proses produksi. Tak hanya itu, para mahasiswa juga dikenalkan pada sistem pemantauan produksi real-time dan data analytics yang digunakan untuk pengambilan keputusan operasional secara cepat dan tepat.</p><p>&nbsp; &nbsp; &nbsp;Mahasiswa kemudian berkesempatan untuk melihat langsung area produksi dengan pengawasan ketat sesuai standar keamanan industri. Mereka menyaksikan bagaimana teknologi dan sistem informasi mendukung operasional yang presisi, efisien, dan ramah lingkungan di PT Omron.</p><p>&nbsp; &nbsp; &nbsp;Kunjungan ini memberikan pengalaman langsung kepada mahasiswa untuk melihat bagaimana teori yang dipelajari di bangku kuliah, seperti sistem basis data, integrasi sistem, dan manajemen proyek TI, diimplementasikan dalam konteks industri global. Selain itu, kegiatan ini juga menjadi inspirasi dan motivasi bagi mahasiswa untuk terus mengasah kompetensi di bidang teknologi informasi, khususnya dalam dunia industri manufaktur dan otomasi.</p><p>&nbsp; &nbsp; &nbsp;Dengan selesainya kunjungan industri ini, diharapkan mahasiswa dapat membawa pulang pemahaman yang lebih mendalam mengenai peran strategis sistem informasi dalam menciptakan efisiensi, kualitas, dan daya saing industri di era transformasi digital.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-28 10:41:00', '2025-05-27 20:44:19', '2025-06-11 02:10:24', 2),
 (11, 16, 'Kunjungan Industri PT. Toyota Motor Manufacturing Indonesia ', '[{\"data\": {\"src\": [\"images/contents/01JWAHVTCJN6GPHH9WB811HD40.png\", \"images/contents/01JWAHVTCZB966BJRB52Z25J18.png\", \"images/contents/01JWAHVTDFYPKR1001SADDVPE5.png\"]}, \"type\": \"image\"}, {\"data\": {\"text\": \"<p>&nbsp; &nbsp; &nbsp;Pada hari Rabu, 28 Februari 2024, mahasiswa Program Studi Sistem Informasi melaksanakan kunjungan industri ke <strong>PT. Toyota Motor Manufacturing Indonesia (TMMIN)</strong> yang berlokasi di Karawang, Jawa Barat. Kegiatan ini merupakan bagian dari program akademik yang bertujuan untuk memperkenalkan mahasiswa pada implementasi teknologi informasi dalam industri otomotif skala global.</p><p>&nbsp; &nbsp; &nbsp;Rombongan mahasiswa disambut dengan hangat oleh tim Corporate Affairs dan Divisi Information Technology PT TMMIN. Acara diawali dengan pemaparan mengenai sejarah Toyota di Indonesia, struktur organisasi, serta lini bisnis utama yang mencakup produksi kendaraan dan komponen untuk kebutuhan domestik dan ekspor. Mahasiswa juga diberikan penjelasan mengenai filosofi produksi Toyota yang terkenal, yaitu <strong>Toyota Production System (TPS)</strong>, yang menekankan pada prinsip efisiensi, kualitas, dan continuous improvement (<em>kaizen</em>).</p><p>&nbsp; &nbsp; &nbsp;Salah satu fokus kunjungan adalah pemanfaatan <strong>teknologi informasi dan sistem digital</strong> dalam mendukung operasional pabrik. Mahasiswa diperkenalkan pada berbagai sistem seperti <strong>Manufacturing Execution System (MES)</strong>, <strong>Enterprise Resource Planning (ERP)</strong>, serta penerapan <strong>Internet of Things (IoT)</strong> untuk monitoring mesin dan proses produksi secara real-time. Selain itu, mahasiswa juga diperlihatkan bagaimana data analitik dan sistem informasi berperan dalam pengambilan keputusan, pemeliharaan prediktif, serta pengendalian kualitas produk.</p><p>&nbsp; &nbsp; &nbsp;Tur ke area produksi dilakukan dengan protokol keamanan dan keselamatan kerja yang ketat. Dalam sesi ini, mahasiswa dapat menyaksikan secara langsung bagaimana proses perakitan kendaraan dilakukan dengan tingkat presisi tinggi, didukung oleh sistem otomasi dan robotik yang terintegrasi dengan sistem informasi yang canggih.</p><p>&nbsp; &nbsp; &nbsp;Kunjungan ini memberikan wawasan nyata kepada mahasiswa mengenai keterkaitan antara bidang sistem informasi dan industri manufaktur otomotif. Selain memperluas pemahaman teoritis, kegiatan ini juga menjadi sarana bagi mahasiswa untuk mengenal lebih jauh dunia kerja profesional, serta tantangan dan peluang yang ada di era transformasi digital industri 4.0.</p><p>&nbsp; &nbsp; &nbsp;Dengan berakhirnya kunjungan ini, diharapkan mahasiswa dapat mengembangkan semangat untuk terus belajar dan berinovasi, serta lebih siap dalam menghadapi dunia kerja di bidang teknologi informasi yang terus berkembang pesat, khususnya dalam konteks industri skala global seperti PT Toyota Motor Manufacturing Indonesia.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-28 11:15:29', '2025-05-27 21:19:31', '2025-06-11 02:10:24', 2),
@@ -112,15 +112,15 @@ INSERT INTO `contents` (`id`, `page_id`, `sub_title`, `contents`, `is_active`, `
 (14, 10, 'Beasiswa Yamaoka Foundation', '[{\"data\": {\"src\": [\"images/contents/01JWFEJ1JVJ3SSGG2MZ03SERW9.jpg\"]}, \"type\": \"image\"}]', 1, '2025-05-30 08:57:17', '2025-05-29 18:57:57', '2025-05-29 18:57:57', 0),
 (15, 11, 'Program JENESYS', '[{\"data\": {\"text\": \"<p>&nbsp; &nbsp; &nbsp;Program JENESYS (Jaringan Pertukaran pelajar dan pemuda Jepang-Asia Timur) adalah proyek yang diajukan oleh pemerintah Jepang dari sudut pandang memberikan landasan yang kuat untuk solidaritas yang kuat di Asia melalui pertukaran pemuda berskala besar.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-30 08:59:29', '2025-05-29 18:59:39', '2025-05-29 18:59:54', 0),
 (16, 11, 'Sakura Science Program', '[{\"data\": {\"text\": \"<p>&nbsp; &nbsp; &nbsp;<em>Sakura Science Program</em> atau juga dikenal dengan nama <em>Sakura Program Exchange in Science</em> merupakan suatu program pertukaran pelajar dan mahasiswa dari beberapa negara berkembang ke Jepang dengan tujuan memperkenalkan dan memberikan pengalaman terkait perkembangan ilmu dan teknologi di Jepang.</p>\"}, \"type\": \"text\"}]', 1, '2025-05-30 09:10:58', '2025-05-29 19:11:06', '2025-05-29 19:11:56', 0),
-(23, 2, 'Daftar Dosen', '[{\"data\": {\"model\": \"App\\\\Models\\\\Dosen\", \"columns\": [\"image\", \"nama\", \"jabatan\", \"sertifikasi_dosen\", \"bidang_pengajaran\"], \"filters\": []}, \"type\": \"table\"}]', 1, '2025-05-31 14:53:36', '2025-05-31 00:54:32', '2025-06-11 02:14:36', 1),
+(23, 2, 'Daftar Dosen', '[{\"data\": {\"model\": \"App\\\\Models\\\\Dosen\", \"columns\": [\"image\", \"nama\", \"jabatan\", \"sertifikasi_dosen\", \"bidang_pengajaran\"], \"filters\": []}, \"type\": \"table\"}]', 1, '2025-05-31 14:53:36', '2025-05-31 00:54:32', '2025-07-18 22:49:17', 2),
 (24, 6, 'Kalender Akademik 2024/2025', '[{\"data\": {\"model\": \"App\\\\Models\\\\KalenderAkademik\", \"columns\": [\"kegiatan\", \"tgl_mulai\", \"tgl_selesai\", \"keterangan\"], \"filters\": []}, \"type\": \"table\"}]', 1, '2025-05-31 15:01:54', '2025-05-31 01:02:13', '2025-06-10 02:11:18', 1),
 (25, 12, 'Prospek Karir', '[{\"data\": {\"text\": \"<p>Para lulusan dapat bekerja di berbagai instansi seperti System Analis, Project Manager, Database Analis, Supervisor Konsultan, Akademist Peneliti</p>\"}, \"type\": \"text\"}]', 1, '2025-06-01 10:10:22', '2025-05-31 20:10:33', '2025-05-31 20:10:49', 0),
-(26, 18, 'Jadwal Kuliah', '[{\"data\": {\"text\": \"<p>Belum ada apa\\\"</p>\"}, \"type\": \"text\"}]', 1, '2025-06-01 10:14:57', '2025-05-31 20:15:13', '2025-05-31 20:15:30', 0),
+(26, 18, 'Jadwal Kuliah', '[{\"data\": {\"text\": \"<p>Belum ada apa\\\"</p>\"}, \"type\": \"text\"}]', 1, '2025-06-01 10:14:57', '2025-05-31 20:15:13', '2025-07-25 04:33:24', 2),
 (27, 19, 'Himpunan Mahasiswa', '[{\"data\": {\"src\": [\"images/contents/01JWMRE1SX3D3W1TS9BDHRQF68.jpg\"]}, \"type\": \"image\"}, {\"data\": {\"text\": \"<h3><strong>Sejarah Sistem Informasi</strong></h3><p><strong>HMSI adalah salah satu organisasi yang berada dibawah naungan Badan Eksekutif Mahasiswa Fakultas Teknik&nbsp; Universitas Darma Persada dirintis pada 8 Desember 2007. Sekretraiatan HMSI berada di Lantai 4 Fakultas Teknik.</strong></p>\"}, \"type\": \"text\"}]', 1, '2025-06-01 10:25:40', '2025-05-31 20:26:44', '2025-05-31 20:28:25', 0),
 (28, 19, 'Struktur Organisasi HMSI', '[{\"data\": {\"src\": [\"images/contents/01JWMRT9RR4W25Y3V2PMQ0DSP8.png\"]}, \"type\": \"image\"}, {\"data\": {\"text\": \"<h2>Kegiatan HMSI</h2><h3>Kegiatan yang akan dijalankan</h3><ol><li>s</li><li>s</li><li>s</li></ol>\"}, \"type\": \"text\"}]', 1, '2025-06-01 10:31:12', '2025-05-31 20:33:25', '2025-05-31 20:36:14', 0),
 (30, 5, 'Kalender Akademik 2023 / 2024', '[{\"data\": {\"model\": \"App\\\\Models\\\\KalenderAkademik\", \"columns\": [\"kegiatan\", \"tgl_mulai\", \"tgl_selesai\", \"keterangan\", \"semester\"], \"filters\": []}, \"type\": \"table\"}]', 1, '2025-06-01 11:48:30', '2025-05-31 21:49:02', '2025-06-11 02:14:43', 1),
-(31, 25, 'Lowongan Kerja', '[{\"data\": {\"posts\": [\"1\"], \"category_id\": \"3\"}, \"type\": \"posts\"}]', 1, '2025-06-04 07:08:07', '2025-06-03 17:08:13', '2025-06-19 15:26:23', 2),
-(32, 1, 'Strategi', '[{\"data\": {\"text\": \"<ol><li>Tercapainya kualitas lulusan yang mampu mengembangkan sistem informasi manufaktur berbasiskan teknologi informasi dalam dunia industri.</li><li>Tercapainya tepat waktu dan cepat diterima pada dunia kerja dengan karakter kreatif, inovatif, berdaya saing, profesional dan bertanggung jawab.</li><li>Meningkatnya hasil karya ilmiah di bidang sistem informasi baik tingkat nasional maupun internasional</li><li>Terciptanya kemitraan untuk meningkatkan kuantitas dan kualitas kegiatan Tridharma Perguruan Tinggi dan layanan yang berkualitas baik akademik dan non akademik.</li></ol>\"}, \"type\": \"text\"}]', 1, '2025-06-04 15:39:09', '2025-06-04 01:39:19', '2025-06-11 02:17:05', 1),
+(31, 25, 'Lowongan Kerja', '[{\"data\": {\"posts\": [\"1\"], \"category_id\": \"3\"}, \"type\": \"posts\"}]', 1, '2025-06-04 07:08:07', '2025-06-03 17:08:13', '2025-07-18 23:02:05', 4),
+(32, 1, 'Strategi', '[{\"data\": {\"text\": \"<ol><li>Tercapainya kualitas lulusan yang mampu mengembangkan sistem informasi manufaktur berbasiskan teknologi informasi dalam dunia industri.</li><li>Tercapainya tepat waktu dan cepat diterima pada dunia kerja dengan karakter kreatif, inovatif, berdaya saing, profesional dan bertanggung jawab.</li><li>Meningkatnya hasil karya ilmiah di bidang sistem informasi baik tingkat nasional maupun internasional</li><li>Terciptanya kemitraan untuk meningkatkan kuantitas dan kualitas kegiatan Tridharma Perguruan Tinggi dan layanan yang berkualitas baik akademik dan non akademik.</li></ol>\"}, \"type\": \"text\"}]', 1, '2025-06-04 15:39:09', '2025-06-04 01:39:19', '2025-07-24 08:43:47', 5),
 (33, 4, 'Kalender Akademik 2022 / 2023', '[{\"data\": {\"model\": \"App\\\\Models\\\\KalenderAkademik\", \"columns\": [\"kegiatan\", \"tgl_mulai\", \"tgl_selesai\", \"semester\", \"keterangan\"], \"filters\": []}, \"type\": \"table\"}]', 1, '2025-06-09 19:41:20', '2025-06-09 05:41:35', '2025-06-11 01:53:44', 4),
 (35, 33, 'Data Skripsi', '[{\"data\": {\"limit\": \"5\", \"form_id\": \"40ecf8a2-7529-4054-a35a-581c7edd8861\"}, \"type\": \"form_submissions\"}]', 1, '2025-06-19 23:50:47', '2025-06-19 16:51:02', '2025-06-19 16:51:57', 1);
 
@@ -132,13 +132,13 @@ INSERT INTO `contents` (`id`, `page_id`, `sub_title`, `contents`, `is_active`, `
 
 CREATE TABLE `dosen` (
   `id` bigint UNSIGNED NOT NULL,
-  `nip` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `image` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `nama` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `jabatan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `sertifikasi_dosen` enum('Belum Memiliki','Memiliki') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `bidang_pengajaran` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `nip` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `image` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `nama` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `jabatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `sertifikasi_dosen` enum('Belum Memiliki','Memiliki') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bidang_pengajaran` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -158,11 +158,11 @@ INSERT INTO `dosen` (`id`, `nip`, `email`, `image`, `nama`, `jabatan`, `sertifik
 
 CREATE TABLE `failed_jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `uuid` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `connection` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `queue` text COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `exception` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `uuid` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `connection` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `exception` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `failed_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -174,12 +174,12 @@ CREATE TABLE `failed_jobs` (
 
 CREATE TABLE `forms` (
   `id` bigint UNSIGNED NOT NULL,
-  `form_id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `description` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `form_id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `description` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `fields` json NOT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `is_public` tinyint(1) NOT NULL,
   `start_date` datetime NOT NULL,
   `end_date` datetime NOT NULL,
@@ -192,7 +192,8 @@ CREATE TABLE `forms` (
 --
 
 INSERT INTO `forms` (`id`, `form_id`, `title`, `slug`, `description`, `fields`, `password`, `is_public`, `start_date`, `end_date`, `created_at`, `updated_at`) VALUES
-(1, '40ecf8a2-7529-4054-a35a-581c7edd8861', 'Pengumpulan Judul Skripsi Tahun Ajaran 2024 / 2025', 'pengumpulan-judul-skripsi-tahun-ajaran-2024-2025', 'sdfdsfsdf', '[{\"name\": \"nama\", \"type\": \"text\", \"label\": \"Nama Mahasiswa\", \"options\": {\"baf6ea91-104b-4667-b39c-0c5e7d33ebec\": {\"value\": null}}, \"required\": true}, {\"name\": \"judul_skripsi\", \"type\": \"text\", \"label\": \"Judul Skripsi\", \"options\": {\"fa2ea7ed-095f-4d28-a3c9-5e520f00f5ea\": {\"value\": null}}, \"required\": true}]', 'dasda', 1, '2025-06-19 21:47:30', '2025-06-20 21:48:44', '2025-06-19 07:51:47', '2025-06-19 15:13:59');
+(1, '40ecf8a2-7529-4054-a35a-581c7edd8861', 'Pengumpulan Judul Skripsi Tahun Ajaran 2024 / 2025', 'pengumpulan-judul-skripsi-tahun-ajaran-2024-2025', 'sdfdsfsdf', '[{\"name\": \"nama\", \"type\": \"text\", \"label\": \"Nama Mahasiswa\", \"options\": {\"baf6ea91-104b-4667-b39c-0c5e7d33ebec\": {\"value\": null}}, \"required\": true}, {\"name\": \"judul_skripsi\", \"type\": \"text\", \"label\": \"Judul Skripsi\", \"options\": {\"fa2ea7ed-095f-4d28-a3c9-5e520f00f5ea\": {\"value\": null}}, \"required\": true}]', 'dasda', 1, '2025-06-19 21:47:30', '2025-06-20 21:48:44', '2025-06-19 07:51:47', '2025-06-19 15:13:59'),
+(2, '9b9759f6-d11e-4bb6-bb68-e279c7f02030', 'Pengumpulan Judul KP', 'pengumpulan-judul-kp', 'dasdasd', '[{\"name\": \"nama\", \"type\": \"text\", \"label\": \"Nama Mahasiswa\", \"options\": {\"9399bcb9-ca99-4092-81c6-af3c162f6e0e\": {\"value\": null}}, \"required\": true}, {\"name\": \"judul_kp\", \"type\": \"text\", \"label\": \"Judul KP\", \"options\": {\"8efa10b1-e993-40ec-81b7-283f95b19961\": {\"value\": null}}, \"required\": true}]', '123', 1, '2025-07-01 14:22:02', '2025-07-02 14:22:05', '2025-07-01 07:22:43', '2025-07-01 07:22:43');
 
 -- --------------------------------------------------------
 
@@ -202,7 +203,7 @@ INSERT INTO `forms` (`id`, `form_id`, `title`, `slug`, `description`, `fields`, 
 
 CREATE TABLE `form_submissions` (
   `id` bigint UNSIGNED NOT NULL,
-  `form_id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `form_id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `data` json NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -214,7 +215,8 @@ CREATE TABLE `form_submissions` (
 
 INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_at`) VALUES
 (2, '40ecf8a2-7529-4054-a35a-581c7edd8861', '{\"nama\": \"Dhihya Rayyanda\", \"judul_skripsi\": \"Rancang Bangun Sistem Informasi Penagihan BPP\"}', '2025-06-19 15:17:20', '2025-06-19 15:17:20'),
-(3, '40ecf8a2-7529-4054-a35a-581c7edd8861', '{\"nama\": \"Yafet Bram\", \"judul_skripsi\": \"Rancang Bangun Sistem Informasi Keuangan PT. APA\"}', '2025-06-19 15:23:49', '2025-06-19 15:23:49');
+(3, '40ecf8a2-7529-4054-a35a-581c7edd8861', '{\"nama\": \"Yafet Bram\", \"judul_skripsi\": \"Rancang Bangun Sistem Informasi Keuangan PT. APA\"}', '2025-06-19 15:23:49', '2025-06-19 15:23:49'),
+(4, '9b9759f6-d11e-4bb6-bb68-e279c7f02030', '{\"nama\": \"Dhihya Rayyanda\", \"judul_kp\": \"asdada sdasdasd\"}', '2025-07-01 07:23:17', '2025-07-01 07:23:17');
 
 -- --------------------------------------------------------
 
@@ -224,8 +226,8 @@ INSERT INTO `form_submissions` (`id`, `form_id`, `data`, `created_at`, `updated_
 
 CREATE TABLE `jobs` (
   `id` bigint UNSIGNED NOT NULL,
-  `queue` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `queue` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `attempts` tinyint UNSIGNED NOT NULL,
   `reserved_at` int UNSIGNED DEFAULT NULL,
   `available_at` int UNSIGNED NOT NULL,
@@ -239,13 +241,13 @@ CREATE TABLE `jobs` (
 --
 
 CREATE TABLE `job_batches` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `total_jobs` int NOT NULL,
   `pending_jobs` int NOT NULL,
   `failed_jobs` int NOT NULL,
-  `failed_job_ids` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
-  `options` mediumtext COLLATE utf8mb4_unicode_ci,
+  `failed_job_ids` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `options` mediumtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
   `cancelled_at` int DEFAULT NULL,
   `created_at` int NOT NULL,
   `finished_at` int DEFAULT NULL
@@ -260,12 +262,12 @@ CREATE TABLE `job_batches` (
 CREATE TABLE `kalender_akademik` (
   `id` bigint UNSIGNED NOT NULL,
   `tahun_ajaran_id` bigint UNSIGNED NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `kegiatan` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `kegiatan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `tgl_mulai` date NOT NULL,
   `tgl_selesai` date NOT NULL,
-  `semester` enum('Gasal','Genap') COLLATE utf8mb4_unicode_ci NOT NULL,
-  `keterangan` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `semester` enum('Gasal','Genap') CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keterangan` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -386,7 +388,7 @@ INSERT INTO `kalender_akademik` (`id`, `tahun_ajaran_id`, `slug`, `kegiatan`, `t
 
 CREATE TABLE `migrations` (
   `id` int UNSIGNED NOT NULL,
-  `migration` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `migration` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `batch` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -410,7 +412,8 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (24, '2025_06_06_075336_create_comments_table', 8),
 (25, '2025_06_09_033411_add_views_count_to_contents_table', 9),
 (26, '2025_06_19_135048_create_forms_table', 10),
-(27, '2025_06_19_135301_create_form_submissions_table', 10);
+(27, '2025_06_19_135301_create_form_submissions_table', 10),
+(28, '2025_07_24_155257_create_visits_table', 11);
 
 -- --------------------------------------------------------
 
@@ -420,7 +423,7 @@ INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 
 CREATE TABLE `model_has_permissions` (
   `permission_id` bigint UNSIGNED NOT NULL,
-  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `model_id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -432,7 +435,7 @@ CREATE TABLE `model_has_permissions` (
 
 CREATE TABLE `model_has_roles` (
   `role_id` bigint UNSIGNED NOT NULL,
-  `model_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `model_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `model_id` bigint UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -442,7 +445,7 @@ CREATE TABLE `model_has_roles` (
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (1, 'App\\Models\\User', 1),
-(3, 'App\\Models\\User', 2);
+(2, 'App\\Models\\User', 2);
 
 -- --------------------------------------------------------
 
@@ -451,11 +454,11 @@ INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 --
 
 CREATE TABLE `notifications` (
-  `id` char(36) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `notifiable_type` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` char(36) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `notifiable_type` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `notifiable_id` bigint UNSIGNED NOT NULL,
-  `data` text COLLATE utf8mb4_unicode_ci NOT NULL,
+  `data` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `read_at` timestamp NULL DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -469,8 +472,8 @@ CREATE TABLE `notifications` (
 
 CREATE TABLE `pages` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `published_at` datetime NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
@@ -526,8 +529,8 @@ INSERT INTO `pages` (`id`, `title`, `slug`, `published_at`, `created_at`, `updat
 --
 
 CREATE TABLE `password_reset_tokens` (
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `token` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -539,8 +542,8 @@ CREATE TABLE `password_reset_tokens` (
 
 CREATE TABLE `permissions` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `guard_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `guard_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -796,10 +799,10 @@ INSERT INTO `permissions` (`id`, `name`, `guard_name`, `created_at`, `updated_at
 CREATE TABLE `posts` (
   `id` bigint UNSIGNED NOT NULL,
   `category_id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `images` json DEFAULT NULL,
-  `content` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `content` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `published_at` datetime NOT NULL,
   `user_id` bigint UNSIGNED NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -821,9 +824,9 @@ INSERT INTO `posts` (`id`, `category_id`, `title`, `slug`, `images`, `content`, 
 
 CREATE TABLE `post_categories` (
   `id` bigint UNSIGNED NOT NULL,
-  `title` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `slug` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `url` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `title` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `slug` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `url` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -845,8 +848,8 @@ INSERT INTO `post_categories` (`id`, `title`, `slug`, `url`, `created_at`, `upda
 
 CREATE TABLE `roles` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `guard_name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `guard_name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -985,11 +988,11 @@ INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 --
 
 CREATE TABLE `sessions` (
-  `id` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `id` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `user_id` bigint UNSIGNED DEFAULT NULL,
-  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
-  `user_agent` text COLLATE utf8mb4_unicode_ci,
-  `payload` longtext COLLATE utf8mb4_unicode_ci NOT NULL,
+  `ip_address` varchar(45) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `user_agent` text CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci,
+  `payload` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `last_activity` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
@@ -998,8 +1001,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('gqih11BlHJn0nyjbuBztiHA1LwlJ1sK4V3Qephnq', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoicTBDdkZxR2htRWsyTWtEOEV4SWtmVmhaeHlEdkczWU5Eb1UxR0hDcCI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjk6Imh0dHA6Ly93ZWJzaS50ZXN0L2FkbWluL2xvZ2luIjt9fQ==', 1750354120),
-('scUv908yLxbSp1U0caZhUoBiZjNeDwNjZpq1tyo3', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/137.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoidFg3VXdvNWV2OUhZVHNJRUFpTmRuMlFJWHl6ZW5wcTJxY1dyZnlVZiI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTc6Imh0dHA6Ly93ZWJzaS50ZXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1750353111);
+('dLlsygwxr2DwCtnOpEx1Zjcb7IXlmGWhAx0SJ93c', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoib24zUnBNY0dMaUNkYmJ2UGd2UDNLbFFCNnY4TlZycnpQTHlUc2JRTSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fXM6NjoiX2ZsYXNoIjthOjI6e3M6Mzoib2xkIjthOjA6e31zOjM6Im5ldyI7YTowOnt9fX0=', 1753863553),
+('HdVFJGItnpL1Bapm1KqKMYdb5uBkPwmX4WgHxGYn', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiSFdzOVN0SDN0Q1pNSGRaSzI0aTQ1ZXZJN1lDd09vUnQ5RVdDT3NvbSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MTc6Imh0dHA6Ly93ZWJzaS50ZXN0Ijt9czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319fQ==', 1753431344),
+('nnHXsTVmsNa9k7Mq4eRyii4oTuT1p3MkWq1AYQJM', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36', 'YTo0OntzOjY6Il90b2tlbiI7czo0MDoiSmNqQUdSZnVya0pvdmdudHIyTWlMOUZRbVg2SFdUR09rMFk2ZVVINSI7czozOiJ1cmwiO2E6MTp7czo4OiJpbnRlbmRlZCI7czoyMzoiaHR0cDovL3dlYnNpLnRlc3QvYWRtaW4iO31zOjk6Il9wcmV2aW91cyI7YToxOntzOjM6InVybCI7czoyOToiaHR0cDovL3dlYnNpLnRlc3QvYWRtaW4vbG9naW4iO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX19', 1753428636);
 
 -- --------------------------------------------------------
 
@@ -1009,8 +1013,8 @@ INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, 
 
 CREATE TABLE `tahun_ajaran` (
   `id` bigint UNSIGNED NOT NULL,
-  `tahun_ajaran` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `keterangan` varchar(255) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `tahun_ajaran` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `keterangan` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1032,12 +1036,12 @@ INSERT INTO `tahun_ajaran` (`id`, `tahun_ajaran`, `keterangan`, `created_at`, `u
 
 CREATE TABLE `users` (
   `id` bigint UNSIGNED NOT NULL,
-  `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `name` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
   `email_verified_at` timestamp NULL DEFAULT NULL,
-  `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `role` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'admin',
-  `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `password` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL,
+  `role` varchar(255) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NOT NULL DEFAULT 'admin',
+  `remember_token` varchar(100) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
@@ -1048,7 +1052,87 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `role`, `remember_token`, `created_at`, `updated_at`) VALUES
 (1, 'Eka Yuni Astuty', 'ekayuniastuty@yahoo.com', NULL, '$2y$12$sLZ0tHtzPSSkf7u.zgeApeDH7iCTyuhjgeIc2uiwQV.0zSkeVzVFm', 'admin', NULL, '2025-05-22 01:43:17', '2025-06-04 01:27:06'),
-(2, 'Rayyanda', 'tafhimquran512@gmail.com', NULL, '$2y$12$ZO7kqrnh7gUmv4.RjLYi6eTq40fnfRmb95RbA/A1Hv90hcjFh9Xs2', 'admin', NULL, '2025-06-04 06:12:10', '2025-06-04 06:12:10');
+(2, 'Rayyanda', 'tafhimquran512@gmail.com', NULL, '$2y$12$gBoiRUh4DKGMyLt2bKhND.oVn2emoMjlKl.Ae/MWgfYOP3ec6q8J.', 'admin', NULL, '2025-06-04 06:12:10', '2025-07-24 13:21:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `visits`
+--
+
+CREATE TABLE `visits` (
+  `id` bigint UNSIGNED NOT NULL,
+  `ip_address` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `visited_at` timestamp NULL DEFAULT NULL,
+  `duration` int NOT NULL DEFAULT '0',
+  `created_at` timestamp NULL DEFAULT NULL,
+  `updated_at` timestamp NULL DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `visits`
+--
+
+INSERT INTO `visits` (`id`, `ip_address`, `visited_at`, `duration`, `created_at`, `updated_at`) VALUES
+(1, '192.168.0.176', '2025-06-25 05:15:44', 441, '2025-07-24 09:09:44', '2025-07-24 09:09:44'),
+(2, '192.168.0.4', '2025-07-15 07:35:44', 35, '2025-07-24 09:09:44', '2025-07-24 09:09:44'),
+(3, '192.168.0.89', '2025-06-23 18:20:44', 421, '2025-07-24 09:09:44', '2025-07-24 09:09:44'),
+(4, '192.168.0.167', '2025-07-17 19:21:44', 366, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(5, '192.168.0.53', '2025-07-22 00:44:44', 108, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(6, '192.168.0.6', '2025-07-20 00:16:44', 534, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(7, '192.168.0.219', '2025-07-19 02:26:44', 435, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(8, '192.168.0.111', '2025-07-06 07:06:44', 132, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(9, '192.168.0.223', '2025-07-22 05:54:44', 212, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(10, '192.168.0.30', '2025-07-01 12:22:44', 409, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(11, '192.168.0.13', '2025-07-20 00:35:44', 224, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(12, '192.168.0.190', '2025-07-08 20:05:44', 153, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(13, '192.168.0.46', '2025-07-13 11:37:44', 214, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(14, '192.168.0.255', '2025-06-24 01:58:44', 533, '2025-07-24 09:09:45', '2025-07-24 09:09:45'),
+(15, '127.0.0.1', '2025-07-25 07:40:31', 18, '2025-07-25 07:40:31', '2025-07-25 07:40:31'),
+(16, '127.0.0.1', '2025-07-25 07:40:33', 19, '2025-07-25 07:40:33', '2025-07-25 07:40:33'),
+(17, '127.0.0.1', '2025-07-25 07:40:33', 20, '2025-07-25 07:40:33', '2025-07-25 07:40:33'),
+(18, '127.0.0.1', '2025-07-25 07:40:34', 21, '2025-07-25 07:40:34', '2025-07-25 07:40:34'),
+(19, '127.0.0.1', '2025-07-25 07:40:37', 24, '2025-07-25 07:40:37', '2025-07-25 07:40:37'),
+(20, '127.0.0.1', '2025-07-25 07:40:50', 37, '2025-07-25 07:40:50', '2025-07-25 07:40:50'),
+(21, '127.0.0.1', '2025-07-25 07:41:09', 12, '2025-07-25 07:41:09', '2025-07-25 07:41:09'),
+(22, '127.0.0.1', '2025-07-25 07:41:09', 14, '2025-07-25 07:41:09', '2025-07-25 07:41:09'),
+(23, '127.0.0.1', '2025-07-25 07:41:23', 27, '2025-07-25 07:41:23', '2025-07-25 07:41:23'),
+(24, '127.0.0.1', '2025-07-25 07:41:26', 30, '2025-07-25 07:41:26', '2025-07-25 07:41:26'),
+(25, '127.0.0.1', '2025-07-25 07:41:28', 32, '2025-07-25 07:41:28', '2025-07-25 07:41:28'),
+(26, '127.0.0.1', '2025-07-25 07:41:32', 36, '2025-07-25 07:41:32', '2025-07-25 07:41:32'),
+(27, '127.0.0.1', '2025-07-25 07:41:33', 37, '2025-07-25 07:41:33', '2025-07-25 07:41:33'),
+(28, '127.0.0.1', '2025-07-25 07:41:41', 43, '2025-07-25 07:41:41', '2025-07-25 07:41:41'),
+(29, '127.0.0.1', '2025-07-25 07:41:44', 47, '2025-07-25 07:41:44', '2025-07-25 07:41:44'),
+(30, '127.0.0.1', '2025-07-25 07:41:48', 52, '2025-07-25 07:41:48', '2025-07-25 07:41:48'),
+(31, '127.0.0.1', '2025-07-25 07:42:13', 14, '2025-07-25 07:42:13', '2025-07-25 07:42:13'),
+(32, '127.0.0.1', '2025-07-25 07:42:31', 12, '2025-07-25 07:42:31', '2025-07-25 07:42:31'),
+(33, '127.0.0.1', '2025-07-25 07:43:20', 17, '2025-07-25 07:43:20', '2025-07-25 07:43:20'),
+(34, '127.0.0.1', '2025-07-25 07:57:51', 730, '2025-07-25 07:57:51', '2025-07-25 07:57:51'),
+(35, '127.0.0.1', '2025-07-25 07:57:54', 733, '2025-07-25 07:57:54', '2025-07-25 07:57:54'),
+(36, '127.0.0.1', '2025-07-25 08:00:05', 62, '2025-07-25 08:00:05', '2025-07-25 08:00:05'),
+(37, '127.0.0.1', '2025-07-25 08:00:07', 64, '2025-07-25 08:00:07', '2025-07-25 08:00:07'),
+(38, '127.0.0.1', '2025-07-25 08:01:01', 49, '2025-07-25 08:01:01', '2025-07-25 08:01:01'),
+(39, '127.0.0.1', '2025-07-25 08:01:03', 52, '2025-07-25 08:01:03', '2025-07-25 08:01:03'),
+(40, '127.0.0.1', '2025-07-25 08:03:48', 161, '2025-07-25 08:03:48', '2025-07-25 08:03:48'),
+(41, '127.0.0.1', '2025-07-25 08:03:50', 163, '2025-07-25 08:03:50', '2025-07-25 08:03:50'),
+(42, '127.0.0.1', '2025-07-25 08:05:06', 73, '2025-07-25 08:05:06', '2025-07-25 08:05:06'),
+(43, '127.0.0.1', '2025-07-25 08:05:08', 75, '2025-07-25 08:05:08', '2025-07-25 08:05:08'),
+(44, '127.0.0.1', '2025-07-25 08:07:44', 153, '2025-07-25 08:07:44', '2025-07-25 08:07:44'),
+(45, '127.0.0.1', '2025-07-24 08:08:36', 360, NULL, NULL),
+(46, '127.0.0.1', '2025-07-25 08:11:46', 239, '2025-07-25 08:11:46', '2025-07-25 08:11:46'),
+(47, '192.168.0.90', '2025-07-13 22:12:56', 343, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(48, '192.168.0.152', '2025-07-15 03:33:56', 187, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(49, '192.168.0.120', '2025-07-19 21:08:56', 69, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(50, '192.168.0.203', '2025-07-01 12:24:56', 337, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(51, '192.168.0.222', '2025-07-23 04:55:56', 431, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(52, '192.168.0.174', '2025-07-11 02:12:56', 295, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(53, '192.168.0.186', '2025-07-22 03:56:56', 342, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(54, '192.168.0.160', '2025-07-25 00:00:56', 458, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(55, '192.168.0.117', '2025-06-27 09:47:56', 179, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(56, '192.168.0.150', '2025-07-20 02:10:56', 212, '2025-07-25 08:11:56', '2025-07-25 08:11:56'),
+(57, '127.0.0.1', '2025-07-25 08:15:44', 234, '2025-07-25 08:15:44', '2025-07-25 08:15:44'),
+(58, '127.0.0.1', '2025-07-30 08:06:46', 5, '2025-07-30 08:06:46', '2025-07-30 08:06:46'),
+(59, '127.0.0.1', '2025-07-30 08:19:13', 4, '2025-07-30 08:19:13', '2025-07-30 08:19:13');
 
 --
 -- Indexes for dumped tables
@@ -1224,6 +1308,12 @@ ALTER TABLE `users`
   ADD UNIQUE KEY `users_email_unique` (`email`);
 
 --
+-- Indexes for table `visits`
+--
+ALTER TABLE `visits`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1255,13 +1345,13 @@ ALTER TABLE `failed_jobs`
 -- AUTO_INCREMENT for table `forms`
 --
 ALTER TABLE `forms`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `form_submissions`
 --
 ALTER TABLE `form_submissions`
-  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `jobs`
@@ -1279,7 +1369,7 @@ ALTER TABLE `kalender_akademik`
 -- AUTO_INCREMENT for table `migrations`
 --
 ALTER TABLE `migrations`
-  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
+  MODIFY `id` int UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
 
 --
 -- AUTO_INCREMENT for table `pages`
@@ -1322,6 +1412,12 @@ ALTER TABLE `tahun_ajaran`
 --
 ALTER TABLE `users`
   MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `visits`
+--
+ALTER TABLE `visits`
+  MODIFY `id` bigint UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
 -- Constraints for dumped tables

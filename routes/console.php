@@ -10,4 +10,4 @@ Artisan::command('inspire', function () {
     $this->comment(Inspiring::quote());
 })->purpose('Display an inspiring quote');
 
-Schedule::command(MonthlyContentUpdateReminder::class)->monthlyOn(28, '08:00');
+Schedule::command(MonthlyContentUpdateReminder::class)->monthlyOn(30, '19:00');

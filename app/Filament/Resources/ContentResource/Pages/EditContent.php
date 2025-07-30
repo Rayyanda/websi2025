@@ -9,6 +9,7 @@ use Filament\Actions;
 use Filament\Resources\Pages\EditRecord;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
+use Filament\Notifications\Notification;
 
 class EditContent extends EditRecord
 {
@@ -30,5 +31,11 @@ class EditContent extends EditRecord
         foreach ($admins as $admin) {
             Mail::to($admin)->send(new NewContentInformation($editor,$this->record));
         }
+        Notification::make()
+            ->title('Content Updated')
+            ->body('The content has been successfully updated and notifications sent to admins.')
+            ->success()
+            ->send();
+        parent::afterSave();
     }
 }
